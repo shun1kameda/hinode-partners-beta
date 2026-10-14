@@ -6,7 +6,6 @@
 <meta name="color-scheme" content="light">
 <title>日の出パートナーズ株式会社｜β版</title>
 <meta name="description" content="ともに未来を照らし、持続的な価値を創造するパートナー">
-<meta name="description" content="ともに未来を照らし、持続的な価値を創造するパートナー">
 <style>
 html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#F2F1EE}
 #siteFrame{display:block;width:100%;height:100%;border:0;background:#F2F1EE}
@@ -32,7 +31,7 @@ body{font-family:var(--gothic)}
 </head>
 <body>
 <noscript><style>#boot,#siteFrame{display:none}html,body{overflow:auto;height:auto}body{padding:2rem;box-sizing:border-box}</style><p>日の出パートナーズ株式会社</p><p>メール：<a href="mailto:info@hinode.partners">info@hinode.partners</a></p><p>サイトをご覧いただくにはJavaScriptを有効にしてください。</p></noscript>
-<noscript><p>日の出パートナーズ株式会社</p><p>メール：<a href="mailto:info@hinode.partners">info@hinode.partners</a></p><p>サイトをご覧いただくにはJavaScriptを有効にしてください。</p></noscript>
+
 <div id="boot">HINODE PARTNERS</div>
 <iframe id="siteFrame" title="日の出パートナーズ株式会社 β版"></iframe>
 <script>
@@ -58,6 +57,11 @@ function parseHash(){
   let parts=raw.split('/');
   let route='index'; try { route=decodeURIComponent(parts.shift()||'index'); } catch {}
   let anchor=''; try { anchor=parts.length?decodeURIComponent(parts.join('/')):''; } catch {}
+  if(route==='flow'){
+    route='service';
+    anchor='';
+    history.replaceState(null,'','#service');
+  }
   if(!ROUTES.has(route)) route='index';
   return {route,anchor};
 }
@@ -78,7 +82,6 @@ function renderFromHash(){
 }
 window.addEventListener('message',function(e){
   const d=e.data||{};
-  if(e.source!==frame.contentWindow) return;
   if(e.source!==frame.contentWindow) return;
   if(d.type!=='hinode-beta-route'||!ROUTES.has(d.route)) return;
   const h='#'+encodeURIComponent(d.route)+(d.anchor?'/'+encodeURIComponent(d.anchor):'');
