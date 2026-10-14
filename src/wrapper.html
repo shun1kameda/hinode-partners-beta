@@ -13,6 +13,22 @@ html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#F2F1EE}
 #boot{position:fixed;inset:0;display:grid;place-items:center;background:#0C1D42;color:#D8BD8E;font:12px/1.6 system-ui,sans-serif;letter-spacing:.18em;z-index:2;transition:opacity .25s}
 #boot.is-hidden{opacity:0;pointer-events:none}
 </style>
+<style id="hinode-typography">
+@font-face{font-family:"Hinode Tsukushi Gothic Local";src:local("FOT-筑紫ゴシック Pr5N R"),local("TsukuGoPr5N-R"),local("FOT-筑紫ゴシック Pro R"),local("TsukuGoPro-R");font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:"Hinode Tsukushi Gothic Local";src:local("FOT-筑紫ゴシック Pr5N M"),local("TsukuGoPr5N-M"),local("FOT-筑紫ゴシック Pro M"),local("TsukuGoPro-M");font-style:normal;font-weight:500;font-display:swap}
+@font-face{font-family:"Hinode Tsukushi Gothic Local";src:local("FOT-筑紫ゴシック Pr5N D"),local("TsukuGoPr5N-D"),local("FOT-筑紫ゴシック Pro D"),local("TsukuGoPro-D");font-style:normal;font-weight:600;font-display:swap}
+@font-face{font-family:"Hinode Tsukushi Gothic Local";src:local("FOT-筑紫ゴシック Pro B"),local("TsukuGoPro-B"),local("FOT-筑紫ゴシック Pr5N D"),local("TsukuGoPr5N-D");font-style:normal;font-weight:700;font-display:swap}
+
+:root{
+  --gothic:var(--gothic-web,"Hinode Tsukushi Gothic Local"),"FOT-筑紫ゴシック Pr5N","FOT-筑紫ゴシック Pro","筑紫ゴシック","TsukuGoPr5N","TsukuGoPro","Hiragino Kaku Gothic ProN","Yu Gothic","YuGothic","Noto Sans JP",sans-serif;
+  --display:"Hiragino Mincho ProN","Yu Mincho","YuMincho","Noto Serif JP",serif;
+  --mincho:var(--display);
+  --latin:"Avenir Next","Avenir","Helvetica Neue",Arial,sans-serif;
+}
+
+body{font-family:var(--gothic)}
+#boot{font-family:var(--latin);font-weight:500}
+</style>
 </head>
 <body>
 <noscript><style>#boot,#siteFrame{display:none}html,body{overflow:auto;height:auto}body{padding:2rem;box-sizing:border-box}</style><p>日の出パートナーズ株式会社</p><p>メール：<a href="mailto:info@hinode.partners">info@hinode.partners</a></p><p>サイトをご覧いただくにはJavaScriptを有効にしてください。</p></noscript>
