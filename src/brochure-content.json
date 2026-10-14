@@ -1,0 +1,451 @@
+{
+  "source": {
+    "filename": "日の出パートナーズ_会社案内_字形・フォント統一_資本金追加 (1)(1).pdf",
+    "pages": 4
+  },
+  "brand": {
+    "tagline": "ともに未来を照らし、持続的な価値を創造するパートナー",
+    "tagline_lines": [
+      "ともに未来を照らし、",
+      "持続的な価値を創造する",
+      "パートナー"
+    ],
+    "eyebrow": "日本の企業に、新たな日の出を。",
+    "tagline_en": "A BRIGHTER TOMORROW, TOGETHER.",
+    "keyword_en": "STRATEGY / EXECUTION / VALUE CREATION",
+    "hero_description": "日本企業の持続的な成長に向けて、戦略立案から実行、そして定着・実現まで。確かな伴走で、企業の新たな価値創造を支援します。",
+    "source_page": 1,
+    "logo_light": "logo-light.png",
+    "logo_dark": "logo-dark.png",
+    "hero_image": "hero-sunrise.png"
+  },
+  "company": {
+    "section_title": "会社概要",
+    "description": "日の出パートナーズは、日本企業の経営課題に向き合い、企業価値向上を支援するコンサルティングファームです。戦略立案から実行・定着まで一貫して伴走します。",
+    "name": "日の出パートナーズ株式会社",
+    "name_en": "HINODE PARTNERS, INC.",
+    "representative_title": "共同代表・代表取締役",
+    "representatives": [
+      "古川 英司",
+      "木山 雅之"
+    ],
+    "capital_yen": 20000000,
+    "capital_display": "20,000,000円",
+    "business": "コンサルティング事業",
+    "postal_code": "102-0073",
+    "address": "東京都千代田区九段北1-13-6",
+    "building": "千客万来九段ビル2階",
+    "email": "info@hinode.partners",
+    "website": "https://hinode.partners",
+    "source_page": 1
+  },
+  "principles": {
+    "section_title": "私たちの理念",
+    "source_page": 1,
+    "items": [
+      {
+        "title": "顧客への約束",
+        "text": "経営の最前線で、ともに挑む。まだ見ぬ可能性を、確かな企業価値へ。"
+      },
+      {
+        "title": "組織への約束",
+        "text": "一人では成しえない未来を最高のチームで作り上げる。"
+      },
+      {
+        "title": "社会への価値",
+        "text": "日本企業に新たな価値を創り、世界で輝く未来を拓く。"
+      }
+    ]
+  },
+  "services": {
+    "section_title": "6つのサービス領域",
+    "overview": "経営課題に応じて専門性を組み合わせ、構想から実行まで支援します。",
+    "headline": "戦略立案から実行・定着まで、価値創造を一気通貫で支援します。",
+    "description_source": "日の出パートナーズは、創業者8名の専門性と実績を結集し、企業のあらゆる経営課題に対して、戦略から伴走して支援します。",
+    "description_web_recommended": "日の出パートナーズは、専門性と実績を結集し、企業のあらゆる経営課題に対して、戦略から伴走して支援します。",
+    "source_page": 2,
+    "image": "services-city-sunrise.png",
+    "items": [
+      {
+        "number": "01",
+        "slug": "strategy",
+        "title": "事業戦略・M&A戦略・新規事業",
+        "title_lines": [
+          "事業戦略・M&A戦略",
+          "新規事業"
+        ],
+        "description": "成長戦略、M&A戦略、新規事業構想、事業計画策定、企業の持続的な成長に向けた意思決定と実行を支援します。"
+      },
+      {
+        "number": "02",
+        "slug": "ma-turnaround",
+        "title": "M&A実行・事業再生・PMI・組織再編",
+        "title_lines": [
+          "M&A実行・事業再生",
+          "PMI・組織再編"
+        ],
+        "description": "FA、DD、企業価値評価、ディール実行、事業再生、カーブアウト、PMI、統合・再編まで、M&Aに関するプロセスを一貫して支援します。"
+      },
+      {
+        "number": "03",
+        "slug": "overseas-jv",
+        "title": "海外進出・JV設立支援",
+        "title_lines": [
+          "海外進出",
+          "JV設立支援"
+        ],
+        "description": "市場調査、事業構想、パートナー探索・交渉、投資・JV設計、契約、ガバナンス、実行・PMIまで、海外展開を力強くサポートします。"
+      },
+      {
+        "number": "04",
+        "slug": "portfolio-fpa",
+        "title": "事業ポートフォリオ・資本コスト経営・FP&A",
+        "title_lines": [
+          "事業ポートフォリオ",
+          "資本コスト経営・FP&A"
+        ],
+        "side_title_source": "事業PF・資本コスト経営 FP&A",
+        "description": "ROIC経営、事業ポートフォリオ構築、資本配分、経営計画・予算・業績管理等を通じ、企業価値向上に向けた経営の仕組みを実現します。"
+      },
+      {
+        "number": "05",
+        "slug": "ipo-governance",
+        "title": "IPO・決算・ガバナンス高度化",
+        "title_lines": [
+          "IPO・決算",
+          "ガバナンス高度化"
+        ],
+        "description": "IPO準備、決算・開示対応、内部統制、会計方針の整理、会計不正調査・フォレンジック、海外拠点対応など、企業の信頼性を高める取組みを支援します。"
+      },
+      {
+        "number": "06",
+        "slug": "it-dx",
+        "title": "IT・DX・組織・業務改革",
+        "title_lines": [
+          "IT・DX",
+          "組織・業務改革"
+        ],
+        "description": "IT戦略、システム構想、AI・データ活用、業務改革、組織・権限設計、人事、実行PMOまで、企業の変革を支援します。"
+      }
+    ]
+  },
+  "name_meaning": {
+    "section_title": "社名に込めた想い",
+    "headline": "人と知をつなぎ、企業の新たな可能性を拓く。",
+    "closing": "まだ見ぬ可能性を、つながる力で、確かな企業価値へ。",
+    "source_page": 2,
+    "items": [
+      {
+        "title": "日の出",
+        "text": "新たな始まりと、未来への希望。企業の可能性に光を当て、次の成長をともにつくります。"
+      },
+      {
+        "title": "HINODE × High Node",
+        "text": "高い専門性と経営の視座で、信頼を土台に、人・企業・知見をつなぎ、新たな価値を創ります。"
+      },
+      {
+        "title": "Partners",
+        "text": "お客様や仲間と、ともに挑み、意思決定から実行・定着まで、企業価値の向上に伴走します。"
+      }
+    ]
+  },
+  "members": {
+    "source_page": 3,
+    "headline_source": "創業8名の専門性が、企業の変革を動かす",
+    "headline_web_recommended": "専門性が、企業の変革を動かす",
+    "intro_source": [
+      "戦略・M&A・事業再生から、経営管理・ガバナンス・海外展開まで。",
+      "異なる強みを持つ8名が連携し、課題の整理から実行・定着まで支援します。"
+    ],
+    "intro_web_recommended": [
+      "戦略・M&A・事業再生から、経営管理・ガバナンス・海外展開まで。",
+      "異なる強みを持つメンバーが連携し、課題の整理から実行・定着まで支援します。"
+    ],
+    "requested_public_roster": [
+      "furukawa",
+      "kiyama",
+      "kameda",
+      "ono",
+      "muto",
+      "orimo",
+      "ajimura"
+    ],
+    "items": [
+      {
+        "id": "furukawa",
+        "name": "古川 英司",
+        "name_en": "Yoji Furukawa",
+        "role": "共同代表／代表取締役",
+        "qualification": "公認会計士",
+        "expertise": [
+          "M&A戦略・実行支援",
+          "事業再生・再生計画策定",
+          "組織再編",
+          "IPO支援"
+        ],
+        "note": "中小企業活性化協議会 専門家（6都府県）",
+        "tags": [
+          "M&A",
+          "事業再生",
+          "組織再編",
+          "IPO"
+        ],
+        "photo": "furukawa.png",
+        "image_xref": 563,
+        "position_in_pdf": "上段左端",
+        "public": true
+      },
+      {
+        "id": "kiyama",
+        "name": "木山 雅之",
+        "name_en": "Masayuki Kiyama",
+        "role": "共同代表／代表取締役",
+        "qualification": "公認会計士",
+        "expertise": [
+          "事業ポートフォリオ戦略",
+          "資本コスト経営・FP&A",
+          "M&A戦略・PMI・事業再生",
+          "決算・開示・不正調査",
+          "海外進出・JV設立支援"
+        ],
+        "note": "中小企業活性化協議会 専門家（東京都）",
+        "tags": [
+          "事業PF",
+          "資本コスト・FP&A",
+          "M&A・PMI",
+          "事業再生"
+        ],
+        "photo": "kiyama.png",
+        "image_xref": 592,
+        "position_in_pdf": "上段左から2人目",
+        "public": true
+      },
+      {
+        "id": "ono",
+        "name": "小野 翔平",
+        "role": "シニアマネージャー",
+        "qualification": "公認会計士",
+        "expertise": [
+          "投資マネジメント",
+          "M&Aアドバイザリー",
+          "事業再生・経営管理高度化"
+        ],
+        "note": "中小企業活性化協議会 専門家（東京都）",
+        "tags": [
+          "投資管理",
+          "M&A",
+          "事業再生",
+          "経営管理"
+        ],
+        "photo": "ono.png",
+        "image_xref": 598,
+        "position_in_pdf": "上段左から3人目",
+        "public": true
+      },
+      {
+        "id": "kameda",
+        "name": "亀田 隼",
+        "role": "シニアマネージャー",
+        "qualification": "公認会計士",
+        "expertise": [
+          "資本コスト経営",
+          "事業ポートフォリオ戦略",
+          "財務DD・企業価値評価",
+          "PMI・IFRS・決算早期化"
+        ],
+        "note": null,
+        "tags": [
+          "資本コスト",
+          "DD・VAL",
+          "PMI",
+          "決算高度化"
+        ],
+        "photo": "kameda.png",
+        "image_xref": 617,
+        "position_in_pdf": "上段右端",
+        "public": true
+      },
+      {
+        "id": "orimo",
+        "name": "織茂 勝利",
+        "role": "シニアマネージャー",
+        "qualification": null,
+        "education": "東京大学大学院修士課程修了",
+        "expertise": [
+          "製造業・R&D戦略",
+          "戦略実行支援",
+          "CAE・AI活用",
+          "M&A戦略",
+          "IT・DX・組織・業務改革",
+          "人事・採用戦略"
+        ],
+        "note": null,
+        "tags": [
+          "製造業・R&D",
+          "IT・DX",
+          "人事・採用",
+          "戦略実行"
+        ],
+        "photo": "orimo.png",
+        "image_xref": 624,
+        "position_in_pdf": "下段左端",
+        "public": true
+      },
+      {
+        "id": "muto",
+        "name": "武藤 航平",
+        "role": "マネージャー",
+        "qualification": "公認会計士",
+        "expertise": [
+          "会計アドバイザリー",
+          "M&Aアドバイザリー",
+          "内部統制",
+          "官公庁・エネルギー・インフラ"
+        ],
+        "note": null,
+        "tags": [
+          "会計・内部統制",
+          "M&A",
+          "エネルギー",
+          "インフラ"
+        ],
+        "photo": "muto.png",
+        "image_xref": 637,
+        "position_in_pdf": "下段左から2人目",
+        "public": true
+      },
+      {
+        "id": "ajimura",
+        "name": "味村 有佳子",
+        "role": null,
+        "qualification": null,
+        "expertise": [],
+        "photo": null,
+        "public": true
+      }
+    ]
+  },
+  "closing_hero": {
+    "headline": "挑戦するすべての人に、ともに歩むパートナーを。",
+    "description": "確かな専門性と、実行力で。企業の価値創造と、より良い社会の実現に貢献します。",
+    "side_copy": "新たな日の出を、ともに。",
+    "image": "closing-city-fuji.png",
+    "source_page": 4
+  },
+  "reasons": {
+    "section_title": "選ばれる理由",
+    "intro": "専門性 × 実行力 × グローバルな視点で、企業のあらゆる課題に応えます。",
+    "source_page": 4,
+    "items": [
+      {
+        "number": "1",
+        "title": "独立した立場による質の高い支援",
+        "description": "特定の金融機関や事業会社に属さない独立系だからこそ、中立・公正な立場で、クライアントにとって最適なソリューションを提供します。"
+      },
+      {
+        "number": "2",
+        "title": "戦略から実行・設立までのワンストップ支援",
+        "description": "戦略立案、分析、実行支援から新会社設立まで、一気通貫で対応。構想にとどまらず、成果の実現まで伴走します。"
+      },
+      {
+        "number": "3",
+        "title": "海外展開に強いクロスボーダー対応力",
+        "description": "アジアをはじめとするグローバルネットワークと知見を活かし、海外進出・クロスボーダー案件を力強くサポートします。"
+      },
+      {
+        "number": "4",
+        "title": "共同代表によるハンズオン支援",
+        "description": "豊富な経験を持つ2名の共同代表自らがクライアントに深く関与し、最後まで責任を持って支援します。"
+      }
+    ]
+  },
+  "themes": {
+    "section_title": "主な支援テーマ",
+    "intro": "多様な経営課題に対し、実現可能なソリューションを提供します。",
+    "source_page": 4,
+    "items": [
+      {
+        "number": "01",
+        "title": "M&A一気通貫支援",
+        "caption": "M&A戦略 / FA / DD / VAL / PMI",
+        "description": "戦略立案からFA、デューデリジェンス、バリュエーション、PMIまで一貫して支援し、M&Aの成功を実現します。",
+        "image": "theme-ma.png"
+      },
+      {
+        "number": "02",
+        "title": "海外進出支援・JV設立支援",
+        "description": "アジア・欧米を含む海外展開の戦略立案から現地パートナーとのJV設立まで一貫して支援します。",
+        "image": "theme-overseas.png"
+      },
+      {
+        "number": "03",
+        "title": "組織再編",
+        "description": "事業ポートフォリオの最適化、グループ再編、持株会社化など、戦略的な組織再編を支援します。",
+        "image": "theme-reorganization.png"
+      },
+      {
+        "number": "04",
+        "title": "事業再生",
+        "description": "事業・財務の実態分析から再生計画の策定・実行まで、企業の再生と持続的成長を支援します。",
+        "image": "theme-turnaround.png"
+      },
+      {
+        "number": "05",
+        "title": "訂正決算支援",
+        "description": "過年度の決算訂正対応や開示体制の整備など、再発防止を含めた実務的な支援を行います。",
+        "image": "theme-financial-reporting.png"
+      },
+      {
+        "number": "06",
+        "title": "不正調査（フォレンジック）",
+        "description": "不正の事実解明、原因分析、再発防止策の策定まで、専門的な調査・分析を実施します。",
+        "image": "theme-forensic.png"
+      }
+    ]
+  },
+  "process": {
+    "section_title": "支援の流れ",
+    "intro": "初回相談から定着まで、5つのステップで着実に伴走します。",
+    "source_page": 4,
+    "items": [
+      {
+        "number": "01",
+        "title": "相談",
+        "description": "現状の課題やご要望を丁寧にヒアリングします。"
+      },
+      {
+        "number": "02",
+        "title": "構想",
+        "description": "課題整理と方向性の検討、最適なアプローチをご提案します。"
+      },
+      {
+        "number": "03",
+        "title": "分析",
+        "description": "専門的な分析により、実現可能性と具体的な解決策を策定します。"
+      },
+      {
+        "number": "04",
+        "title": "実行",
+        "description": "計画に基づき、実務レベルで確実に実行を支援します。"
+      },
+      {
+        "number": "05",
+        "title": "定着",
+        "description": "成果の定着・自走化に向け、継続的なフォローを行います。"
+      }
+    ]
+  },
+  "leadership_message": {
+    "section_title": "共同代表メッセージ",
+    "headline": "企業の挑戦に、確かな伴走を。",
+    "description": "日の出パートナーズは、企業の挑戦に寄り添い、戦略から実行まで、ともに歩むパートナーです。私たちが、これまでの経験と知見を結集し、クライアントの皆様とともに、新たな価値の創造に挑み続けます。日本から、そして世界へ。より良い社会の実現に向けて、ともに。",
+    "source_page": 4
+  },
+  "contact": {
+    "section_title": "お問い合わせ",
+    "intro": "企業の未来について、まずはお気軽にご相談ください。",
+    "email": "info@hinode.partners",
+    "website": "https://hinode.partners",
+    "source_page": 4
+  }
+}

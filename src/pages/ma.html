@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<script>document.documentElement.classList.add('js');</script><!-- Progressive Enhancement: JSが起動できた場合のみ.revealの初期非表示を有効化。headの最初で実行しちらつきを防ぐ -->
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>M&amp;A実行・事業再生・PMI・組織再編｜日の出パートナーズ株式会社</title>
+<meta name="description" content="ともに未来を照らし、持続的な価値を創造するパートナー。戦略立案から実行・定着まで、価値創造を一気通貫で支援します。">
+<link rel="canonical" href="https://shun1kameda.github.io/hinode-partners-beta/#ma">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="日の出パートナーズ株式会社">
+<meta property="og:title" content="M&amp;A実行・事業再生・PMI・組織再編｜日の出パートナーズ株式会社">
+<meta property="og:description" content="ともに未来を照らし、持続的な価値を創造するパートナー。戦略立案から実行・定着まで、価値創造を一気通貫で支援します。">
+<meta property="og:url" content="https://shun1kameda.github.io/hinode-partners-beta/#ma">
+
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --sumi:#14161B; --ai:#0C1D42; --shinonome:#54606F;
+  --kami:#F2F1EE; --kami-2:#E9E8E3; --kami-3:#E0DFD8;
+  --kin-line:#B8894A; --kin:#7E5A22; --kin-soft:#D8BD8E;
+  --keisen:#D7D5CE;
+  --mincho:"Yu Mincho","YuMincho","Hiragino Mincho ProN","Noto Serif JP",serif;
+  --gothic:"Yu Gothic","YuGothic","Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;
+  --measure:34rem; --measure-wide:46rem;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{overflow-x:hidden}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--kami);color:var(--sumi);font-family:var(--gothic);
+  font-size:16px;line-height:1.95;font-feature-settings:"palt" 1;word-break:auto-phrase;overflow-wrap:break-word}
+a{color:var(--ai);text-underline-offset:.25em}
+:focus-visible{outline:2px solid var(--kin);outline-offset:3px}
+.wrap{width:min(100% - 2.5rem,70rem);margin-inline:auto}
+.narrow{max-width:var(--measure)} .wide{max-width:var(--measure-wide)}
+.skip{position:absolute;left:-9999px;top:0;background:var(--ai);color:#fff;padding:.7rem 1.2rem;z-index:99;text-decoration:none}
+.skip:focus{left:0}
+button{font-family:inherit}
+
+/* ---------- ヘッダー ---------- */
+.site-head{border-bottom:1px solid var(--keisen);background:rgba(242,241,238,.92);
+  backdrop-filter:blur(8px);position:sticky;top:0;z-index:30}
+.site-head .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:4.5rem}
+.brand img{height:38px;width:auto;display:block}/* 2026-08-17：デスクトップの視認性向上のため32px→38px(+19%)。モバイルは下記で32pxを維持 */
+@media(max-width:860px){.brand img{height:32px}}
+.nav{display:flex;gap:1.4rem;font-size:.82rem;flex-wrap:wrap}
+.nav a{color:var(--sumi);text-decoration:none;position:relative}
+.nav a::after{content:"";position:absolute;left:0;right:100%;bottom:-2px;height:1px;background:var(--kin);transition:right .25s}
+.nav a:hover::after,.nav a[aria-current=page]::after{right:0}
+.nav a:hover,.nav a[aria-current=page]{color:var(--kin)}
+.head-actions{display:flex;align-items:center;gap:1rem}
+.pill{display:inline-flex;align-items:center;background:var(--ai);color:#fff!important;
+  padding:.65rem 1.5rem;border-radius:999px;font-size:.82rem;text-decoration:none;letter-spacing:.04em;
+  transition:background .3s;border:none;cursor:pointer}
+.pill:hover{background:var(--kin)}
+
+/* ---------- モバイルドロワーメニュー ---------- */
+.menu-toggle{display:none;background:none;border:1px solid var(--keisen);border-radius:.4rem;
+  width:44px;height:44px;align-items:center;justify-content:center;cursor:pointer;flex:none}
+.menu-toggle span,.menu-toggle span::before,.menu-toggle span::after{
+  content:"";display:block;width:20px;height:1px;background:var(--ai);position:relative;transition:transform .25s,opacity .25s}
+.menu-toggle span::before{position:absolute;top:-6px}
+.menu-toggle span::after{position:absolute;top:6px}
+.menu-toggle[aria-expanded="true"] span{background:transparent}
+.menu-toggle[aria-expanded="true"] span::before{transform:translateY(6px) rotate(45deg)}
+.menu-toggle[aria-expanded="true"] span::after{transform:translateY(-6px) rotate(-45deg)}
+.drawer{position:fixed;inset:0;z-index:40;visibility:hidden}
+.drawer[data-open="true"]{visibility:visible}
+.drawer-backdrop{position:absolute;inset:0;background:rgba(12,29,66,.4);opacity:0;transition:opacity .28s var(--ease-soft)}
+.drawer[data-open="true"] .drawer-backdrop{opacity:1}
+.drawer-panel{position:absolute;top:0;right:0;bottom:0;width:min(80vw,22rem);background:var(--kami);
+  padding:5.5rem 2rem 2rem;transform:translateX(100%);transition:transform .4s var(--ease-premium);
+  display:flex;flex-direction:column;gap:1.6rem}
+.drawer[data-open="true"] .drawer-panel{transform:translateX(0)}
+.drawer-panel a{color:var(--ai);text-decoration:none;font-size:1.05rem;font-family:var(--mincho);
+  opacity:0;transform:translateX(8px);transition:opacity .3s var(--ease-soft),transform .3s var(--ease-soft)}
+/* パネルが6〜7割入ったタイミング（.24s）から、項目を40msずつ送らせて現れさせる */
+.drawer[data-open="true"] .drawer-panel a{opacity:1;transform:translateX(0)}
+.drawer-panel a:nth-child(1){transition-delay:.24s} .drawer-panel a:nth-child(2){transition-delay:.28s}
+.drawer-panel a:nth-child(3){transition-delay:.32s} .drawer-panel a:nth-child(4){transition-delay:.36s}
+.drawer-panel a:nth-child(5){transition-delay:.4s} .drawer-panel a:nth-child(6){transition-delay:.44s}
+.drawer-panel .pill{align-self:flex-start;margin-top:1rem;opacity:0;transform:translateX(8px);
+  transition:opacity .3s var(--ease-soft) .44s,transform .3s var(--ease-soft) .44s}
+.drawer[data-open="true"] .drawer-panel .pill{opacity:1;transform:translateX(0)}
+@media(max-width:860px){
+  .nav{display:none}
+  .head-actions .pill{display:none}
+  .menu-toggle{display:flex}
+}
+
+/* ---------- 見出し：二重線 ---------- */
+h1,h2,h3{font-family:var(--mincho);color:var(--ai);font-weight:600;line-height:1.5}
+h2{font-size:clamp(1.25rem,2.6vw,1.6rem);letter-spacing:.05em;margin:0 0 2rem;
+  padding-bottom:.6rem;position:relative;display:flex;align-items:baseline;gap:1rem}
+h2::after{content:"";position:absolute;left:0;bottom:0;height:4px;width:0;
+  border-top:1px solid var(--kin-line);border-bottom:1px solid var(--kin-line);transition:width 1s cubic-bezier(.2,.7,.2,1)}
+.reveal.is-visible h2::after{width:100%}
+h2 .en{font-family:var(--gothic);font-size:.62rem;letter-spacing:.22em;color:var(--shinonome);font-weight:400}
+h3{font-size:1.06rem}
+p{margin:0 0 1.2rem}
+.lead{font-size:1.03rem;line-height:2.1}
+.note{color:var(--shinonome);font-size:.85rem;line-height:1.85}
+.eyebrow{font-size:.72rem;letter-spacing:.28em;color:var(--kin-soft);margin:0 0 1.6rem;font-weight:600}
+
+/* ---------- セクション帯 ---------- */
+.band{padding:clamp(3.5rem,8vw,6rem) 0}
+.band--tint{background:var(--kami-2)}
+.band--deep{background:var(--ai);color:#E7E9F0}
+.band--deep h2{color:#fff}
+.band--deep h2::after{border-color:var(--kin-soft)}
+.band--deep a{color:var(--kin-soft)}
+.band--deep .round-link{color:#fff}
+.band--deep .round-link .ring{border-color:var(--kin-soft)}
+.band--deep .round-link .ring::before{background:var(--kin-soft)}
+.band--deep .round-link .ring svg path{stroke:var(--kin-soft)}
+
+/* ---------- ヒーロー ---------- */
+.hero{position:relative;overflow:hidden;background:var(--ai);color:#E7E9F0;
+  padding:clamp(4.5rem,11vw,7.5rem) 0 clamp(3rem,7vw,5rem)}
+.hero-canvas{position:absolute;inset:0;z-index:0;width:100%;height:100%;display:block}
+.hero-vignette{position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(90deg,var(--ai) 0%,var(--ai) 28%,rgba(12,29,66,.55) 48%,rgba(12,29,66,0) 68%)}
+/* Flatなネイビーに、ごく僅かな粒状の質感を足す（気づかれない濃さ：opacity .018） */
+.hero-texture{position:absolute;inset:0;z-index:1;width:100%;height:100%;pointer-events:none;opacity:.018;mix-blend-mode:overlay}
+.hero .wrap{position:relative;z-index:2}
+.hero h1{font-weight:600;color:#fff;font-size:clamp(1.7rem,4.6vw,2.85rem);line-height:1.6;
+  letter-spacing:.03em;margin:0 0 1.8rem;text-shadow:0 2px 24px rgba(0,0,0,.35)}
+.hero h1 .line-mask{display:block;overflow:hidden}
+.hero h1 .line-inner{display:inline-block;opacity:0;transform:translateY(22%);
+  animation:maskReveal .85s var(--ease-premium) forwards}
+.hero h1 .line-mask:nth-child(1) .line-inner{animation-delay:.15s}
+.hero h1 .line-mask:nth-child(2) .line-inner{animation-delay:.3s}
+.hero h1 .line-mask:nth-child(3) .line-inner{animation-delay:.45s}
+@keyframes maskReveal{to{opacity:1;transform:translateY(0)}}
+.hero .lead{max-width:30rem;margin:0 0 2.1rem;color:#B8BFCE;
+  opacity:0;animation:fadeUp .75s .62s cubic-bezier(.2,.7,.3,1) forwards}
+.hero .cta-row{opacity:0;animation:fadeUp .75s .78s cubic-bezier(.2,.7,.3,1) forwards}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+/* Motion Token（timing/easingを一箇所で管理） */
+:root{
+  --motion-fast:180ms; --motion-base:320ms; --motion-slow:520ms;
+  --ease-premium:cubic-bezier(.16,1,.3,1); --ease-soft:cubic-bezier(.22,.61,.36,1); --ease-out-quart:cubic-bezier(.25,1,.5,1);
+}
+.hero-line{stroke-dasharray:1300;stroke-dashoffset:1300;animation:draw 1.3s .68s var(--ease-soft) forwards}
+.hero-line.l2{animation-delay:.78s}
+@keyframes draw{to{stroke-dashoffset:0}}
+
+/* 日の出：水平線の下から光がにじみ出る（マスクの開口部が広がる）演出。
+   円自体を大きく上下させるのではなく、Core/Inner/Outerの3層を段階的にフェードインさせて
+   「光が先に感じられ、その後に輪郭が見えてくる」順序を作る。移動量は28pxのみ。 */
+.sun-clip-rect{animation:sunClipGrow 1.7s .78s var(--ease-premium) forwards}
+@keyframes sunClipGrow{from{y:656px;height:0px}to{y:220px;height:480px}}
+.sun-rise{transform-box:fill-box;transform-origin:center;transform:translateY(28px);
+  animation:sunRise 1.8s .75s var(--ease-premium) forwards}
+@keyframes sunRise{to{transform:translateY(0)}}
+.sun-outer{opacity:0;animation:sunFadeOuter 1.7s .68s var(--ease-soft) forwards}
+.sun-inner{opacity:0;animation:sunFadeInner 1.5s .92s var(--ease-soft) forwards}
+.sun-core{opacity:0;animation:sunFadeCore 1.3s 1.12s var(--ease-soft) forwards,sunGlowBreathe 7s 3.4s ease-in-out infinite}
+@keyframes sunFadeOuter{to{opacity:1}}
+@keyframes sunFadeInner{to{opacity:1}}
+@keyframes sunFadeCore{to{opacity:.58}}
+@keyframes sunGlowBreathe{0%,100%{opacity:.5}50%{opacity:.62}}
+.scroll-cue{position:absolute;left:50%;bottom:1.8rem;transform:translateX(-50%);z-index:2;
+  display:flex;flex-direction:column;align-items:center;gap:.6rem;
+  opacity:0;animation:fadeUp .75s 1.25s cubic-bezier(.2,.7,.3,1) forwards}
+.scroll-cue-line{width:1px;height:2.6rem;background:linear-gradient(to bottom,transparent,#D8BD8E 40%,#D8BD8E);position:relative;overflow:hidden}
+.scroll-cue-line::after{content:"";position:absolute;left:0;top:-100%;width:100%;height:100%;
+  background:linear-gradient(to bottom,transparent,#fff);animation:scrollDrop 2.2s 1.9s ease-in-out infinite}
+@keyframes scrollDrop{0%{top:-100%}60%{top:100%}100%{top:100%}}
+.scroll-cue-label{font-size:.62rem;letter-spacing:.3em;color:#9AA6BC;writing-mode:vertical-rl}
+@media(max-width:860px){.scroll-cue{display:none}}
+
+/* CTAボタン：以前は背景色が横から全面に塗りつぶされる典型的なWebアニメーションだったが、
+   高級感を優先し「輪郭の濃さ・背景のごく薄い色づき・矢印のわずかな移動・浮き上がり」に抑えた（2026-08-17改訂） */
+.cta{display:inline-flex;align-items:center;gap:.9rem;border:1px solid rgba(216,189,142,.55);
+  padding:.9rem 2.3rem;text-decoration:none;font-size:.9rem;letter-spacing:.08em;color:var(--kin-soft);
+  position:relative;background:rgba(216,189,142,0);cursor:pointer;
+  transition:background var(--motion-base) var(--ease-soft),border-color var(--motion-base) var(--ease-soft),
+    transform var(--motion-fast) var(--ease-soft),box-shadow var(--motion-base) var(--ease-soft)}
+.cta .arw{transition:transform var(--motion-base) var(--ease-premium)}
+.cta:hover .arw{transform:translateX(3px)}
+.cta:hover{background:rgba(216,189,142,.09);border-color:rgba(216,189,142,.9);transform:translateY(-1px);
+  box-shadow:0 6px 16px rgba(12,29,66,.14)}
+.cta--dark{color:var(--ai);border-color:rgba(12,29,66,.35);background:rgba(12,29,66,0)}
+.cta--dark:hover{background:rgba(12,29,66,.06);border-color:rgba(12,29,66,.6);box-shadow:0 6px 16px rgba(12,29,66,.08)}
+
+/* ---------- 円形リンク ---------- */
+.round-link{display:inline-flex;align-items:center;gap:1rem;text-decoration:none;color:var(--ai);
+  font-size:.85rem;letter-spacing:.06em;background:none;border:none;cursor:pointer;padding:0}
+.round-link .ring{position:relative;width:2.75rem;height:2.75rem;flex:none;border-radius:50%;
+  border:1px solid var(--kin-line);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.round-link .ring::before{content:"";position:absolute;inset:0;border-radius:50%;background:var(--kin-line);
+  transform:scale(0);transition:transform .4s cubic-bezier(.3,.8,.2,1)}
+.round-link .ring svg{position:relative;z-index:1;width:1rem;height:1rem;transition:transform .4s cubic-bezier(.3,.8,.2,1)}
+.round-link .ring svg path{stroke:var(--kin-line);transition:stroke .3s}
+.round-link:hover .ring::before{transform:scale(1)}
+.round-link:hover .ring svg{transform:translateX(3px)}
+.round-link:hover .ring svg path{stroke:#fff}
+
+/* ---------- 浮遊CTA ---------- */
+.float-pill{position:fixed;right:1.5rem;bottom:calc(1.5rem + env(safe-area-inset-bottom));z-index:25;
+  background:var(--ai);color:#fff;padding:.9rem 1.7rem;border-radius:999px;font-size:.82rem;letter-spacing:.05em;
+  text-decoration:none;box-shadow:0 8px 24px rgba(12,29,66,.28);display:inline-flex;align-items:center;gap:.6rem;
+  opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .4s,transform .4s,background .3s}
+.float-pill.is-shown{opacity:1;transform:translateY(0);pointer-events:auto}
+.float-pill:hover{background:var(--kin)}
+@media(max-width:640px){.float-pill{right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom));padding:.8rem 1.3rem;font-size:.78rem}}
+
+/* ---------- Trust Strip（About Intro内、控えめな横一列） ---------- */
+.trust-strip{display:flex;flex-wrap:wrap;gap:0;border:1px solid var(--keisen);margin:2rem 0}
+.trust-item{flex:1 1 10rem;padding:1.3rem 1.4rem;border-right:1px solid var(--keisen)}
+.trust-item:last-child{border-right:none}
+.trust-num{font-family:var(--mincho);font-size:1.9rem;color:var(--ai);margin:0;line-height:1;font-variant-numeric:tabular-nums}
+.trust-num .suf{font-size:1rem;color:var(--kin);margin-left:.1rem}
+.trust-label{font-size:.74rem;color:var(--shinonome);margin:.5rem 0 0;line-height:1.6}
+
+/* ---------- WHY HINODE：大きな番号によるエディトリアル構成 ---------- */
+.why-grid{display:grid;gap:0;border-top:1px solid var(--keisen)}
+@media(min-width:800px){.why-grid{grid-template-columns:repeat(3,1fr)}}
+.why-item{padding:2.4rem 1.8rem 2rem;border-bottom:1px solid var(--keisen)}
+@media(min-width:800px){.why-item{border-right:1px solid var(--keisen);border-bottom:none}
+  .why-item:last-child{border-right:none}}
+.why-no{font-family:var(--mincho);font-size:2.6rem;color:var(--kin);line-height:1;margin:0 0 1.3rem;font-weight:600}
+.why-title-en{font-size:.68rem;letter-spacing:.16em;color:var(--shinonome);margin:0 0 .5rem}
+.why-title-ja{font-family:var(--mincho);font-size:1.15rem;color:var(--ai);margin:0 0 1rem}
+.why-desc{font-size:.9rem;color:#3E4654;line-height:1.9;margin:0}
+
+/* ---------- サービス：アコーディオン ---------- */
+.svc{border-top:1px solid var(--keisen)}
+.svc-item{border-bottom:1px solid var(--keisen)}
+.svc-head{width:100%;display:grid;grid-template-columns:4.5rem 1fr auto;gap:1.5rem;align-items:baseline;
+  padding:1.7rem .5rem;background:none;border:none;text-align:left;cursor:pointer;color:inherit;font:inherit;
+  transition:background .3s,padding-left .3s}
+.svc-head:hover{background:var(--kami)}
+.svc-head[aria-expanded="true"]{background:var(--kami)}
+.svc-no{font-family:var(--mincho);font-size:.95rem;color:var(--kin);letter-spacing:.08em}
+.svc-head h3{margin:0 0 .35rem}
+.svc-head p{margin:0;font-size:.9rem;color:#3E4654;line-height:1.85}
+.svc-arw{color:var(--kin);font-size:1.1rem;transition:transform var(--motion-base) var(--ease-premium);align-self:center}
+.svc-head[aria-expanded="true"] .svc-arw{transform:rotate(90deg)}
+.svc-panel{display:grid;grid-template-rows:0fr;transition:grid-template-rows .38s var(--ease-soft)}
+.svc-panel.is-open{grid-template-rows:1fr}
+.svc-panel-inner{overflow:hidden;min-height:0;padding:.5rem .5rem 2.2rem 6rem;
+  opacity:0;transform:translateY(6px);transition:opacity .32s var(--ease-soft) .05s,transform .32s var(--ease-soft) .05s}
+.svc-panel.is-open .svc-panel-inner{opacity:1;transform:translateY(0)}
+@media(max-width:640px){.svc-head{grid-template-columns:2.8rem 1fr;gap:.9rem}.svc-arw{display:none}
+  .svc-panel-inner{padding-left:2.8rem}}
+.svc-sub{margin-bottom:1.6rem}
+.svc-sub h4{font-size:.76rem;letter-spacing:.1em;color:var(--kin);margin:0 0 .7rem;font-weight:600;font-family:var(--gothic)}
+.svc-sub ul{margin:0;padding:0;list-style:none}
+.svc-sub li{font-size:.88rem;color:#3E4654;padding:.5rem 0 .5rem 1.1rem;border-top:1px solid var(--keisen);position:relative}
+.svc-sub li:first-child{border-top:none}
+.svc-sub li::before{content:"";position:absolute;left:0;top:1.15em;width:.5rem;height:1px;background:var(--kin-line)}
+.svc-people{display:flex;flex-wrap:wrap;gap:.6rem}
+.svc-people a{display:inline-flex;align-items:center;gap:.5rem;font-size:.82rem;text-decoration:none;color:var(--ai);
+  border:1px solid var(--keisen);border-radius:999px;padding:.35rem .9rem .35rem .4rem;transition:border-color .3s}
+.svc-people a:hover{border-color:var(--kin-line)}
+.mini-avatar{width:1.5rem;height:1.5rem;border-radius:50%;background:var(--ai) center/cover no-repeat;color:var(--kin-soft);
+  display:flex;align-items:center;justify-content:center;font-family:var(--mincho);font-size:.72rem;flex:none}
+
+/* ---------- Typical Client Challenges ---------- */
+.challenge-grid{display:grid;gap:1.5rem}
+@media(min-width:720px){.challenge-grid{grid-template-columns:repeat(2,1fr)}}
+.challenge-card{border:1px solid var(--keisen);padding:1.6rem 1.5rem;background:var(--kami)}
+.challenge-tag{font-size:.72rem;letter-spacing:.08em;color:var(--kin);margin:0 0 .9rem}
+.challenge-card ul{margin:0 0 1.1rem;padding:0;list-style:none}
+.challenge-card li{font-size:.9rem;color:#3E4654;line-height:1.8;padding-left:1.3rem;position:relative;margin-bottom:.5rem}
+.challenge-card li::before{content:"「";position:absolute;left:0;color:var(--kin-line)}
+.challenge-card .round-link{font-size:.8rem}
+.challenge-card .round-link .ring{width:2.1rem;height:2.1rem}
+.challenge-card .round-link .ring svg{width:.8rem;height:.8rem}
+
+/* ---------- How We Work ---------- */
+.steps{list-style:none;counter-reset:s;margin:0;padding:0;border-top:1px solid var(--keisen)}
+.steps li{border-bottom:1px solid var(--keisen);padding:1.6rem .5rem 1.6rem 3.2rem;position:relative}
+.steps .step-no{position:absolute;left:.3rem;top:1.6rem;font-family:var(--mincho);font-size:1rem;color:var(--kin);letter-spacing:.05em}
+.steps .step-en{font-size:.66rem;letter-spacing:.12em;color:var(--shinonome);margin:0 0 .3rem}
+.steps h3{margin:0 0 .5rem}
+.steps p{margin:0;font-size:.9rem;color:#3E4654}
+
+/* ---------- Representative Experience ---------- */
+.exp-disclaimer{background:var(--kami-2);border-left:2px solid var(--kin-line);padding:1rem 1.3rem;
+  font-size:.83rem;color:var(--shinonome);margin:0 0 2rem;line-height:1.85}
+.exp-list{border-top:1px solid var(--keisen)}
+.exp-item{border-bottom:1px solid var(--keisen);padding:1.6rem .5rem}
+.exp-cat{font-size:.72rem;letter-spacing:.08em;color:var(--kin);margin:0 0 .5rem}
+.exp-item h3{margin:0 0 .6rem}
+.exp-item p{margin:0 0 .8rem;font-size:.9rem;color:#3E4654}
+.exp-members{font-size:.78rem;color:var(--shinonome)}
+.exp-row{display:flex;gap:.8rem;font-size:.82rem;color:#3E4654;margin:0 0 .5rem}
+.exp-row-label{flex:none;width:6rem;font-size:.7rem;letter-spacing:.08em;color:var(--kin);padding-top:.1rem}
+
+/* ---------- Professional スポットライト ---------- */
+.pro-spot{display:grid;gap:2.5rem;align-items:start}
+@media(min-width:800px){.pro-spot{grid-template-columns:15rem 1fr}}
+.pro-stack{position:relative;height:9.5rem}
+.pro-dot{position:absolute;top:50%;width:2.6rem;height:2.6rem;border-radius:50%;background:var(--kami-2) center/cover no-repeat;
+  border:1px solid var(--keisen);color:var(--shinonome);display:flex;align-items:center;justify-content:center;
+  font-family:var(--mincho);font-size:.9rem;opacity:.6;transform:translateY(-50%) scale(1);filter:grayscale(.7);
+  transition:background var(--motion-base) var(--ease-soft),color var(--motion-base) var(--ease-soft),
+  box-shadow var(--motion-base) var(--ease-soft),filter var(--motion-base) var(--ease-soft),
+  opacity var(--motion-fast) var(--ease-soft),transform var(--motion-fast) var(--ease-premium)}
+.pro-dot.is-active{width:9.5rem;height:9.5rem;background-color:var(--ai);color:#D8BD8E;font-size:2.4rem;
+  opacity:1;border-color:var(--ai);box-shadow:0 14px 30px rgba(12,29,66,.22);z-index:5;filter:grayscale(0)}
+/* 切り替え中：わずかに縮小・退色→新しい写真がわずかに拡大しながら定位置に収まる（350〜450ms） */
+.pro-dot.is-swap-out{opacity:.68;transform:translateY(-50%) scale(.985)}
+.pro-dot.is-active.is-swap-out{opacity:.65;transform:translateY(-50%) scale(.985)}
+.pro-dot.is-swap-in{opacity:.7;transform:translateY(-50%) scale(1.015)}
+.pro-dot.is-active.is-swap-in{opacity:.65;transform:translateY(-50%) scale(1.015)}
+.pro-info{transition:opacity var(--motion-base) var(--ease-soft),transform var(--motion-base) var(--ease-premium)}
+.pro-info.is-fading-next{opacity:0;transform:translateY(5px)}
+.pro-info.is-fading-prev{opacity:0;transform:translateY(-5px)}
+.pro-info .role{font-size:.78rem;letter-spacing:.1em;color:var(--kin);margin:0 0 .5rem}
+.pro-info .name{font-family:var(--mincho);font-size:1.7rem;color:var(--ai);margin:0 0 .3rem}
+.pro-info .name .en{display:inline-block;font-family:var(--gothic);font-size:.7rem;letter-spacing:.12em;color:var(--shinonome);margin-left:.9em;vertical-align:middle}
+.pro-info .title-jp{font-size:.85rem;color:var(--shinonome);margin:0 0 1.1rem}
+.pro-info .desc{font-size:.95rem;line-height:1.9;max-width:32rem;margin:0 0 1.2rem}
+.pro-tags{display:flex;flex-wrap:wrap;gap:.5rem;margin:0 0 1.3rem}
+.pro-tags span{font-size:.74rem;color:var(--kin);border:1px solid var(--keisen);border-radius:999px;padding:.3rem .8rem}
+.pro-detail-toggle{background:none;border:none;color:var(--ai);font-size:.82rem;text-decoration:underline;
+  text-underline-offset:.25em;cursor:pointer;padding:0;font-family:inherit}
+.pro-detail{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.2,.7,.2,1)}
+.pro-detail-inner{padding-top:1.3rem}
+.pro-detail dt{font-size:.72rem;letter-spacing:.1em;color:var(--kin);margin:1rem 0 .4rem}
+.pro-detail dt:first-child{margin-top:0}
+.pro-detail dd{margin:0;font-size:.88rem;color:#3E4654;line-height:1.8}
+.pro-pager{display:flex;align-items:center;gap:1rem;margin-top:1.8rem}
+.pro-pager button{width:2.75rem;height:2.75rem;border-radius:50%;border:1px solid var(--keisen);background:var(--kami);
+  cursor:pointer;font-size:1.1rem;color:var(--ai);line-height:1;display:flex;align-items:center;justify-content:center;
+  transition:border-color .3s,background .3s}
+.pro-pager button:hover{border-color:var(--kin-line);background:var(--kami-2)}
+.pro-progress{flex:1;max-width:8rem;height:1px;background:var(--keisen);position:relative}
+.pro-progress span{position:absolute;left:0;top:0;height:100%;background:var(--kin-line);transition:width .5s cubic-bezier(.2,.7,.2,1)}
+.pro-count{font-size:.78rem;color:var(--shinonome);letter-spacing:.05em;font-variant-numeric:tabular-nums}
+@media(max-width:800px){.pro-stack{height:7rem}.pro-dot.is-active{width:6.5rem;height:6.5rem;font-size:1.7rem}
+  .pro-dot{width:2.6rem;height:2.6rem;font-size:.85rem}}
+
+/* ---------- Insights ---------- */
+.insight-grid{display:grid;gap:1.5rem}
+@media(min-width:720px){.insight-grid{grid-template-columns:repeat(3,1fr)}}
+.insight-card{border:1px solid var(--keisen);padding:1.5rem;text-decoration:none;color:inherit;display:block;transition:border-color .3s}
+.insight-card:hover{border-color:var(--kin-line)}
+.insight-meta{font-size:.72rem;color:var(--kin);margin:0 0 .6rem}
+.insight-card h3{font-size:1rem;margin:0 0 .6rem}
+.insight-card p{font-size:.85rem;color:var(--shinonome);margin:0}
+
+/* ---------- About / Company ---------- */
+.company-table{width:100%;border-collapse:collapse;font-size:.9rem;max-width:var(--measure-wide)}
+.company-table th,.company-table td{text-align:left;padding:.9rem .8rem;border-bottom:1px solid var(--keisen);vertical-align:top}
+.company-table th{width:9rem;font-weight:500;color:var(--ai);white-space:nowrap}
+
+/* ---------- Contact（最終CTA） ---------- */
+.contact-section{background:var(--ai);color:#fff;text-align:center;padding:clamp(4rem,9vw,6.5rem) 0}
+.contact-section h2{justify-content:center;color:#fff}
+.contact-section h2::after{left:50%;transform:translateX(-50%)}
+.contact-section .lead{max-width:34rem;margin-inline:auto;color:#B8BFCE}
+.contact-section .note{color:#8C96B4;margin-top:1.5rem}
+.contact-section h2 .en{color:#9AA6BC}
+
+/* ---------- フッター ---------- */
+.site-foot{background:var(--ai);color:#B8BFCE;padding:3.5rem 0 2.5rem}
+.foot-grid{display:grid;gap:2.5rem;margin-bottom:2.5rem;grid-template-columns:1fr}
+@media(min-width:600px){.foot-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:960px){.foot-grid{grid-template-columns:1.4fr repeat(4,1fr)}}
+.foot-grid img{height:28px;margin-bottom:1rem}
+.foot-col h4{font-size:.72rem;letter-spacing:.1em;color:#8C96B4;margin:0 0 1rem;font-family:var(--gothic);font-weight:600}
+.foot-col ul{list-style:none;margin:0;padding:0}
+.foot-col li{margin-bottom:.6rem}
+.foot-col a{color:#B8BFCE;text-decoration:none;font-size:.85rem}
+.foot-col a:hover{color:var(--kin-soft)}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.14);padding-top:1.5rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.foot-bottom .copy{font-size:.78rem;color:#8993AD}
+
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .hero-line{stroke-dashoffset:0}
+  .reveal{opacity:1!important;transform:none!important}
+  .eyebrow,.hero h1 .line-inner,.hero .lead,.hero .cta-row,.scroll-cue{opacity:1!important;transform:none!important}
+  .hero-canvas{display:none}
+  .sun-rise{transform:translateY(0);clip-path:none}
+  .sun-outer,.sun-inner,.sun-core{opacity:1}
+  .sun-core{opacity:.58}
+}
+/* Progressive Enhancement：JSが動かない・止まっている状態でも本文は最初から見える。
+   JSが正常に起動した場合のみ、html.jsクラス経由で「隠す→スクロールで出す」演出を有効にする。
+   2026-08-17：全ページのフルページスクリーンショットで本文が空白になる不具合を受けて修正 */
+/* Scroll Reveal：Variant A(見出し)/B(本文)/C(リスト・グリッド)の3種類に限定し、
+   ページ全体が同じ動きで単調に見える「テンプレート感」を避ける。2026-08-17改訂 */
+.reveal{opacity:1;transform:none;transition:opacity var(--motion-slow) var(--ease-soft),transform var(--motion-slow) var(--ease-soft)}
+html.js .reveal{opacity:0;transform:translateY(9px)} /* Variant A：見出し。8-10px程度の控えめな移動 */
+html.js .reveal.is-visible{opacity:1;transform:translateY(0)}
+/* 見出し下の二重線は、見出し本体が現れた後に少し遅れて伸びる（既存のh2::afterのwidthアニメーションがこれに相当） */
+
+.reveal-text{opacity:1;transition:opacity var(--motion-slow) var(--ease-soft)} /* Variant B：本文。移動はごく僅かにとどめる */
+html.js .reveal-text{opacity:0;transform:translateY(4px);transition:opacity var(--motion-slow) var(--ease-soft),transform var(--motion-slow) var(--ease-soft)}
+html.js .reveal-text.is-visible{opacity:1;transform:translateY(0)}
+
+.reveal-list .reveal-item{opacity:1;transform:none} /* Variant C：リスト・グリッド。親が現れた後、子を40〜70msずつ送らせる */
+html.js .reveal-list .reveal-item{opacity:0;transform:translateY(9px);transition:opacity var(--motion-base) var(--ease-soft),transform var(--motion-base) var(--ease-soft)}
+html.js .reveal-list.is-visible .reveal-item{opacity:1;transform:translateY(0)}
+html.js .reveal-list.is-visible .reveal-item:nth-child(1){transition-delay:0ms}
+html.js .reveal-list.is-visible .reveal-item:nth-child(2){transition-delay:45ms}
+html.js .reveal-list.is-visible .reveal-item:nth-child(3){transition-delay:90ms}
+html.js .reveal-list.is-visible .reveal-item:nth-child(4){transition-delay:135ms}
+html.js .reveal-list.is-visible .reveal-item:nth-child(5){transition-delay:180ms}
+html.js .reveal-list.is-visible .reveal-item:nth-child(n+6){transition-delay:220ms} /* 250ms上限に収め、長いカスケードにしない */
+@media print{.reveal{opacity:1!important;transform:none!important}}
+.reveal.is-visible{opacity:1;transform:translateY(0)}
+
+/* ---------- 帳簿風リスト・差し込みボックス（詳細ページ用） ---------- */
+.ledger{list-style:none;margin:0 0 2.5rem;padding:0;border-top:1px solid var(--keisen);max-width:var(--measure-wide)}
+.ledger li{border-bottom:1px solid var(--keisen);padding:.85rem .25rem .85rem 1.5rem;position:relative;font-size:.92rem;color:#3E4654}
+.ledger li::before{content:"";position:absolute;left:.25rem;top:1.35em;width:.5rem;height:1px;background:var(--kin-line)}
+.callout{background:var(--kami-2);padding:1.4rem 1.5rem;margin:0 0 1rem;font-size:.9rem;color:#3E4654}
+.callout p:last-child{margin-bottom:0}
+.todo{background:#FFF6E0;border-left:3px solid var(--kin-line);padding:1.1rem 1.3rem;margin:1.5rem 0;font-size:.86rem;color:#5C4A1F;line-height:1.85}
+table.plain{width:100%;border-collapse:collapse;margin:0 0 1.5rem;font-size:.92rem;max-width:var(--measure-wide)}
+table.plain th,table.plain td{text-align:left;padding:.85rem .6rem;border-bottom:1px solid var(--keisen);vertical-align:top}
+table.plain th{width:10rem;font-weight:500;color:var(--ai);white-space:nowrap}
+@media(max-width:600px){table.plain th{width:7rem;font-size:.85rem}}
+
+
+/* ========== v12 FINAL RESPONSIVE POLISH ========== */
+@media(min-width:1200px){
+  .wrap{width:min(100% - 4rem,72rem)}
+  .band{padding:clamp(4rem,7.5vw,6.25rem) 0}
+}
+@media(max-width:860px){
+  .site-head .wrap{min-height:4.15rem}
+  .drawer-panel{width:min(86vw,22rem);padding:5.25rem 1.55rem 2rem}
+  .band{padding:3.6rem 0}
+}
+@media(max-width:640px){
+  body{font-size:15px;line-height:1.9}
+  .wrap{width:min(100% - 1.5rem,70rem)}
+  h2{font-size:1.24rem;gap:.55rem;flex-wrap:wrap;margin-bottom:1.6rem}
+  h2 .en{font-size:.58rem;letter-spacing:.18em}
+  .lead{font-size:.98rem;line-height:1.9}
+  .hero{padding:4.15rem 0 3.35rem}
+  .hero h1{font-size:clamp(1.68rem,8vw,2.1rem);line-height:1.58;margin-bottom:1.5rem}
+  .hero .lead{line-height:1.9;margin-bottom:1.8rem}
+  .contact-section{padding:4rem 0}
+  .foot-grid{gap:2rem}
+  .float-pill{max-width:calc(100vw - 2rem)}
+  .company-table th{width:6.5rem;white-space:normal}
+  table.plain th{white-space:normal}
+}
+/* Top Professional spotlight: preserve the original character-selector layout, refine density only. */
+@media(max-width:799px){
+  #professionals .pro-spot{gap:1.8rem}
+  #professionals .pro-stack{height:7.4rem;width:100%;max-width:16rem}
+  #professionals .pro-dot.is-active{width:7rem;height:7rem}
+  #professionals .pro-info .name{font-size:1.48rem}
+  #professionals .pro-info .desc{font-size:.91rem;line-height:1.85}
+  #professionals .pro-pager{margin-top:1.5rem}
+}
+/* Member roster mobile spacing. */
+@media(max-width:640px){
+  .member-profile{grid-template-columns:5.8rem minmax(0,1fr)!important;gap:.9rem!important;padding:1rem .9rem!important}
+  .member-profile-name{font-size:1.14rem!important}
+  .member-profile-summary{font-size:.83rem!important;line-height:1.82!important}
+  .member-profile-tags{gap:.34rem!important}
+}
+@media(prefers-reduced-motion:reduce){
+  .drawer-panel a{transition-delay:0s!important}
+}
+
+
+
+/* Brochure alignment — 2026-10-14 */
+.page-title{color:#fff;font-size:clamp(1.7rem,4vw,2.7rem);line-height:1.5;margin:0 0 1.4rem;max-width:45rem;overflow-wrap:anywhere}.page-lead{color:#B8BFCE}
+.brand img{width:190px;height:auto;max-height:56px;object-fit:contain}.site-foot .foot-grid{grid-template-columns:1.3fr 1.5fr .7fr .8fr}.foot-col a{overflow-wrap:anywhere}.site-foot .foot-logo{width:180px;height:auto;filter:none}
+.hero h1{font-size:clamp(2rem,4.25vw,4.1rem);line-height:1.5}.hero .lead{max-width:36rem}.hero .hero-brochure-kicker{color:#D8BD8E;letter-spacing:.11em;font-size:.78rem;margin-bottom:1.4rem}
+.intro-split{display:grid;grid-template-columns:1.3fr .7fr;gap:4rem;align-items:center}.intro-split img{width:100%;max-height:360px;object-fit:cover;object-position:center 60%}.intro-split .lead{max-width:42rem}
+.principles-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2.5rem;margin-top:2.8rem}.principle{border-left:1px solid var(--kin-line);padding-left:1.3rem;min-width:0}.principle h3{font-size:.95rem;color:var(--kin);font-family:var(--gothic);margin:0 0 .9rem}.principle-text{font-family:var(--mincho);font-size:1.05rem;line-height:1.9;margin:0}.name-closing{text-align:center;margin-top:2.5rem;font-family:var(--mincho)}
+.brochure-services{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 3rem;border-top:1px solid var(--keisen);margin-top:2.7rem}.brochure-service{display:grid;grid-template-columns:2.2rem 1fr 1.2rem;gap:1.2rem;padding:2rem .25rem;border-bottom:1px solid var(--keisen);text-decoration:none;color:var(--ai);min-width:0;transition:background .2s}.brochure-service:hover{background:#EDEBE5}.service-number{font:1.2rem var(--mincho);color:var(--kin)}.brochure-service strong{font:500 1.18rem/1.65 var(--mincho)}.service-description{display:block;font-size:.85rem;line-height:1.9;color:#525C6E;margin-top:1rem}.service-arrow{color:var(--kin);font-size:1.2rem}.brochure-link{display:inline-block;color:var(--ai);border-bottom:1px solid var(--kin-line);text-decoration:none;padding:.8rem 0;margin-top:1rem}.service-visual{width:100%;height:clamp(130px,23vw,250px);object-fit:cover;display:block;margin-top:2rem}.service-text{font-family:var(--mincho);font-size:clamp(1.1rem,2vw,1.5rem);line-height:2;max-width:48rem}.service-expertise{display:flex;flex-wrap:wrap;gap:.65rem;margin-top:2rem;padding:0;list-style:none}.service-expertise li{border:1px solid var(--keisen);padding:.55rem .9rem;font-size:.85rem}
+.reason-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2rem;margin-top:3rem}.reason{border-top:1px solid var(--kin-line);padding-top:1.5rem}.reason-number{color:var(--kin);font:1.6rem var(--mincho)}.reason h3{font-size:1.08rem;line-height:1.7;min-height:3.4em;margin:1rem 0}.reason-desc{font-size:.87rem;line-height:1.9;margin:0}
+.themes-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2rem;margin-top:2.5rem}.theme{background:var(--ai);color:#fff;min-width:0}.theme img{width:100%;aspect-ratio:2.2;object-fit:cover;display:block}.theme>div{padding:1.5rem}.theme h3{color:#fff;font-size:1.15rem;line-height:1.65;margin:.5rem 0 .9rem}.theme-desc{font-size:.85rem;line-height:1.9;color:#DCE1EA;margin:0}
+.brochure-process{list-style:none;padding:0;margin:2.5rem 0 0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1.5rem}.brochure-process li{border-top:1px solid var(--kin-line);padding-top:1.3rem}.brochure-process li>span{font:1.3rem var(--mincho);color:var(--kin)}.brochure-process h3{font-size:1.25rem;margin:.4rem 0 .8rem}.brochure-process p{font-size:.85rem;line-height:1.85}
+.company-data{margin:2rem 0 0}.company-data>div{display:grid;grid-template-columns:7rem 1fr;gap:2rem;border-top:1px solid var(--keisen);padding:1.25rem 0;font-size:.9rem;line-height:1.85}.company-data dt{font-weight:500;color:var(--ai)}.company-data dd{margin:0}.company-data>div:last-child{border-bottom:1px solid var(--keisen)}
+.leadership{display:grid;grid-template-columns:1.2fr 1fr;gap:4rem;align-items:center}.leadership h3{font-size:clamp(1.5rem,2.8vw,2rem);line-height:1.65}.leadership p{font-size:.95rem;line-height:2}.leaders{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}.leaders figure{margin:0}.leaders img{width:100%;aspect-ratio:4/5;object-fit:cover}.leaders figcaption{font-family:var(--mincho);font-size:1rem;text-align:center;margin-top:.8rem}.leaders small{display:block;font:.65rem var(--gothic);margin-bottom:.5rem;color:var(--shinonome)}
+.brochure-closing{position:relative;background:#fff;min-height:320px;display:flex;align-items:center;overflow:hidden}.brochure-closing>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}.brochure-closing .wrap{position:relative;padding-top:3.5rem;padding-bottom:3.5rem}.brochure-closing h2{max-width:27rem;font-size:clamp(1.6rem,3.2vw,2.6rem);line-height:1.65}.brochure-closing p{max-width:28rem}.brochure-closing .eyebrow{color:var(--kin)}
+.member-profile-photo{aspect-ratio:1}.member-profile-photo img,.member-profile:hover .member-profile-photo img{filter:none;transform:none;object-position:center center!important}.member-initial{display:grid;place-items:center;width:100%;height:100%;background:var(--ai);color:#D8BD8E;font:2.8rem var(--mincho)}.member-profile-detail ul{padding-left:1.2rem;font-size:.85rem;line-height:1.9}.member-profile-role{color:var(--kin)}.member-profile-summary{font-size:.88rem}
+.contact-email{font:clamp(1.2rem,3vw,2rem) var(--mincho);color:var(--ai);overflow-wrap:anywhere;text-decoration:none;border-bottom:1px solid var(--kin-line);display:inline-block;padding-bottom:.5rem}.contact-note{font-size:.85rem;color:var(--shinonome);margin-top:1.5rem}
+@media(max-width:1000px){.reason-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.site-foot .foot-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.brochure-process{gap:1rem}.intro-split,.leadership{gap:2rem}.brochure-services{gap:0 1.5rem}}
+@media(max-width:700px){.intro-split,.leadership{grid-template-columns:1fr}.intro-split img{height:200px}.principles-grid{grid-template-columns:1fr;gap:1.8rem}.brochure-services{grid-template-columns:1fr}.brochure-service{gap:.8rem;padding:1.6rem 0}.themes-grid{grid-template-columns:1fr}.reason-grid{grid-template-columns:1fr;gap:2rem}.reason h3{min-height:0}.brochure-process{grid-template-columns:1fr;gap:.5rem}.brochure-process li{display:grid;grid-template-columns:2rem 1fr;column-gap:1rem}.brochure-process h3{margin:0}.brochure-process li p{grid-column:2;margin:.6rem 0 1rem}.company-data>div{grid-template-columns:5rem 1fr;gap:1rem}.brochure-closing>img{opacity:.38;object-position:70% center}.brochure-closing h2,.brochure-closing p{max-width:100%}.site-foot .foot-grid{grid-template-columns:1fr}.hero h1{font-size:clamp(1.65rem,6.5vw,2.7rem)}.hero .line-mask{white-space:normal}.hero .lead{font-size:.92rem}.brand img{width:155px}.leaders{max-width:380px}.band h2 .en{display:block;margin-left:0;margin-top:.6rem}}
+@media(prefers-reduced-motion:reduce){.brochure-service{transition:none}}
+
+</style>
+</head>
+<body>
+<a class="skip" href="#main">本文へスキップ</a>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="#index" data-beta-route="index"><img src="data:image/webp;base64,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" alt="日の出パートナーズ株式会社 HINODE PARTNERS"></a>
+    <nav class="nav" aria-label="主要メニュー">
+      <a href="#index" data-beta-route="index">トップ</a>
+      <a href="#service" data-beta-route="service">サービス</a>
+      <a href="#member" data-beta-route="member">メンバー</a>
+      <a href="#flow" data-beta-route="flow">支援の流れ</a>
+      <a href="#company" data-beta-route="company">会社概要</a>
+    </nav>
+    <div class="head-actions">
+      <a class="pill" href="#contact" data-beta-route="contact">お問い合わせ</a>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileDrawer" aria-label="メニューを開く"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="mobileDrawer" data-open="false">
+  <div class="drawer-backdrop" data-drawer-close></div>
+  <nav class="drawer-panel" aria-label="モバイルメニュー">
+    <a href="#index" data-beta-route="index" data-drawer-close>トップ</a>
+    <a href="#service" data-beta-route="service" data-drawer-close>サービス</a>
+    <a href="#member" data-beta-route="member" data-drawer-close>メンバー</a>
+    <a href="#flow" data-beta-route="flow" data-drawer-close>支援の流れ</a>
+    <a href="#company" data-beta-route="company" data-drawer-close>会社概要</a>
+    <a class="pill" href="#contact" data-beta-route="contact" data-drawer-close>お問い合わせ</a>
+  </nav>
+</div>
+
+<a class="float-pill" href="#contact" data-beta-route="contact" id="floatPill">お問い合わせ <span aria-hidden="true">→</span></a>
+
+<main id="main"><section class="band band--deep"><div class="wrap"><p class="eyebrow">SERVICE 02</p><h1 class="page-title">M&amp;A実行・事業再生・PMI・組織再編</h1><p class="lead narrow page-lead">戦略立案から実行・定着まで、価値創造を一気通貫で支援します。</p></div></section><section class="band" id="scope"><div class="wrap"><h2 class="reveal">支援内容 <span class="en">OUR SUPPORT</span></h2><p class="service-text">FA、DD、企業価値評価、ディール実行、事業再生、カーブアウト、PMI、統合・再編まで、M&amp;Aに関するプロセスを一貫して支援します。</p><ul class="service-expertise"><li>FA</li><li>DD</li><li>企業価値評価</li><li>ディール実行</li><li>事業再生</li><li>カーブアウト</li><li>PMI</li><li>統合・再編</li></ul></div></section><section class="band" id="team"><div class="wrap"><h2 class="reveal">支援体制 <span class="en">TEAM</span></h2><p class="lead narrow reveal-text">案件の内容・必要な専門性に応じて、適切なプロフェッショナルでチームを組成します。</p><a class="brochure-link" href="#member" data-beta-route="member">メンバーを見る →</a><p class="note">税務・法務に関する事項は、必要に応じて外部専門家と連携します。税務・法務業務のご契約は、お客様と各専門家との間で直接締結いただきます。</p></div></section><section class="band band--tint" id="other-services"><div class="wrap"><h2 class="reveal">6つのサービス領域 <span class="en">SERVICES</span></h2><div class="brochure-services reveal-list"><a class="brochure-service reveal-item" href="#senryaku" data-beta-route="senryaku"><span class="service-number">01</span><span><strong>事業戦略・M&amp;A戦略<br>新規事業</strong><span class="service-description">成長戦略、M&amp;A戦略、新規事業構想、事業計画策定、企業の持続的な成長に向けた意思決定と実行を支援します。</span></span><span class="service-arrow" aria-hidden="true">↗</span></a><a class="brochure-service reveal-item" href="#ma" data-beta-route="ma"><span class="service-number">02</span><span><strong>M&amp;A実行・事業再生<br>PMI・組織再編</strong><span class="service-description">FA、DD、企業価値評価、ディール実行、事業再生、カーブアウト、PMI、統合・再編まで、M&amp;Aに関するプロセスを一貫して支援します。</span></span><span class="service-arrow" aria-hidden="true">↗</span></a><a class="brochure-service reveal-item" href="#global" data-beta-route="global"><span class="service-number">03</span><span><strong>海外進出<br>JV設立支援</strong><span class="service-description">市場調査、事業構想、パートナー探索・交渉、投資・JV設計、契約、ガバナンス、実行・PMIまで、海外展開を力強くサポートします。</span></span><span class="service-arrow" aria-hidden="true">↗</span></a><a class="brochure-service reveal-item" href="#kanri" data-beta-route="kanri"><span class="service-number">04</span><span><strong>事業ポートフォリオ<br>資本コスト経営・FP&amp;A</strong><span class="service-description">ROIC経営、事業ポートフォリオ構築、資本配分、経営計画・予算・業績管理等を通じ、企業価値向上に向けた経営の仕組みを実現します。</span></span><span class="service-arrow" aria-hidden="true">↗</span></a><a class="brochure-service reveal-item" href="#kaikei" data-beta-route="kaikei"><span class="service-number">05</span><span><strong>IPO・決算<br>ガバナンス高度化</strong><span class="service-description">IPO準備、決算・開示対応、内部統制、会計方針の整理、会計不正調査・フォレンジック、海外拠点対応など、企業の信頼性を高める取組みを支援します。</span></span><span class="service-arrow" aria-hidden="true">↗</span></a><a class="brochure-service reveal-item" href="#dx" data-beta-route="dx"><span class="service-number">06</span><span><strong>IT・DX<br>組織・業務改革</strong><span class="service-description">IT戦略、システム構想、AI・データ活用、業務改革、組織・権限設計、人事、実行PMOまで、企業の変革を支援します。</span></span><span class="service-arrow" aria-hidden="true">↗</span></a></div></div></section><section class="band" id="contact"><div class="wrap"><h2 class="reveal">お問い合わせ <span class="en">CONTACT</span></h2><p class="lead narrow reveal-text">企業の未来について、まずはお気軽にご相談ください。</p><a class="brochure-link" href="#contact" data-beta-route="contact">お問い合わせ <span aria-hidden="true">→</span></a></div></section></main>
+
+<footer class="site-foot"><div class="wrap"><div class="foot-grid"><div><img class="foot-logo" src="data:image/webp;base64,UklGRtQfAABXRUJQVlA4IMgfAAAwlgCdASoIAogAPi0UiUKhoSEUiSW8GALEsrcYoYXA57rK0v9ifUpGLyb41fNvIvtc7SY3lsn/t+v/+sea755P7HfC7zr/sr+3fubafBywEzXeOfYv5D8i/yb4VfU7+Wfen8x/fP249vf+j5f/ND/O9Rr8s/nv95/LT+2co/ufmL+5f2X/qf4bUe8l9/b9RD/beir/leBP/vP/R7Ef9l/1pcH8BtY8jYFOPBngfud995FzFkSWIoeTWvE84Q4vJ8LmhDqoTGgZrWjV2bH3R6td70bCyqxGv0S7opnvNXaGkmvRsjYbAyQR1WmaMthbDZBOjk60X6EbegolwBhSAHrDZb1AYWCtPCXxXtbaYsAnCjd06UY1h6LrqPK8c9RbWwB8VLmHubNkktldrVzAiGVEr24DOTHUjhYYbpPZ4h0G2F6XiU12WjDb8H8AffIpYkblz8kYfWTpK/HW3uqF+qQOwbeMBmopVs3vERlhRSOqeEJOM30oF6l8aHHXDHBgJFMEuJ6POAhNCy87ug7jFxTvmxRjb5l5z22TlegcBqdOx/HmpswnmRvbTnWDhrd3J94UFe7yd1M1uAvOroUKk6iE44QGpCPP0u2h8ZffkUV/UNHVCfbYqW7XXsliepqkRLczMBVPPrT+5YpJ6oHc3QwhWkKC+Y0I9mfPJEFV4wUtDrUlWPZeyeHbjDmZgym9Dj4MaQLLonQZsMwspGe9XwrI1MGc4SW2rDjcjYbhMJ4Og6f8uQf75VsatjYYaD9yJa9EIAXS9ZSiBq/3NyNTVsM9y+9p1tv4Gw2I4EWv9OChbs2f4bFNohUXYWpOu6IanFT/2V4SEZevlksRhEeplcAjG0ENVNnUmsopKwB+nqbITzGP6jOOXq/Z+AkhhLJBqPejGZvg+s/gFLecmYjAzvphnqt+rwn3Z7/+aR+cX5dA5crA5LaYN5rWSkqHI1m7I56H1SVWTTivCpc0GRCIIc7JvEvO/PSNROWVnksQ5RHYrYJ2WkVMOLMl8aNvRGKQq3sE1gsv2B/M4DAKg/SRcQ24LqfPue+y2jezu58vn+jOsYxkvswVvd2KjHgCc7K0chWx926DQPjdR6nE3pMCZl7CveWCXN/TTb3v/vgpzTsD+ST3FGbTvM8RjD8hiIEZwyCGEKUK8ENlkOq7SPukgVk2YUwMfIdVTlHDiG7kVWf/oe1v6oMgM7/gKHNwYE1+DuUdkw7FO7HtNZZ7VeMY9S0MOjs+jmrbkfOM8zTyI2Two+rfFo0cBxf0WQH7Ga/nRe/bCL5ax/QSI2XGr4NatBeClS6mzX0sLPnqjhZoXCUGJGUuC+WSiXsjfzv2UQbHi/XybaS601AQoJoc1migJELMTetsJd/x+bZFNiAvu7fJDSHfNvGYVbH/WGxZ74LwKCwmgZkrSirchWo5vBHrpGmKg8zE8K5Sr2eF0peTj2OAnQzmEmb1zNlwNwhCT0GsvtaRdcLwVhalvspgqgagdR14aMFfrJDXreHqprp+YtmgcjnrmxnFwUH4FBe9jKtrZZjGSfDLtybcz6buLSs1d4w46HhCCdYX/T0tGwrgu99QvfiEgK2qQCVmkc3Kx+xexG8e7fLm1joRy+TgAP7/5Z1KNX/8Z9/cf/QfHt/4E+kXvTxtLDvNFA94EvEUfUfSmG8oUxuOBWUhg+Q8fqCM8bidon75npYHWwjAbYChn+J5F4jKXr7n5skBsZ40imzvvUV9RBcSO7O74z5HxUWbOsUC6vBjbvvOM0JGkOn+Qp5P9Bu0M5xTDoMfjl8f04D21pwacI3bwLgkSAvlz1+FgQ8aZs/aLV8Smj13RKQDBXy2K/12PWt/jEsQUodRpK/F9lVoZMJ/c/LykMuRoOPg9eMiFmAuHF7yE8viTugmea4+WWlPiWlDrW8lQluCVnQx7imhUfyWKb2JQ1U7yD3RkfhIZHnc8zNsBuqe8dQ65S2BrVGP7QwPCEGuKD4O9C8Q/rDlSKuPwEW+l+cNQuC3lfeIexjVwy5jt/pcrOxLrDdMq0VmT2HZFZcaoaOtTOYMSgwBCP4GBfmF6zCn5by3/caC6gufnaA8795lenMy39tqsaYE3hXkTT3RQaykN7OVqzAPjx3HcUM2w+ie6Qi2+OBiFdxMs3dnL3Br++8LhXRWZQr/jFs2hzz0iIV+a88C/PljOBsf2/rryPTbx3x434IBEZxD5mtrhYIWczONkvvy+Z6BBx2EFGGuH0uh4HO73AQq3XK3arTTkvQR4psAPQBuqow44MvFx1RXCkrnDZuZyaM1U39fNlFoLGBJIh6ntm7RR4pT+CZdCM4Weo8/l88UCLQorbJhCCHtoengHbLcqyew4ojxLFdtEOoIBHPlLsFg9abg4rlu8yo7Wuc4VCdoctysjcL0HXBx4U5gG0fzhwllhyxfjsYYuUs1wsmVChG8R3r1Dzn7deODJ//B1y+l4/S6JKWIf36bhaUrAoWKNeBe1xECkHb3aci6zxA8kmaxH4nwUKqjcFvnsijDywv6XNNLSlHz+gx/NaBQ6lmb651KGgFBWgaLRwnBeUysW77OoSS9N1rScnXAHn9qV2Ig+5PmhbjkOMu5XUleeeInqp0zAhV2FB8/WRkC0sRhm6JZhnGCd2qRrMj9s7w93BBqCwR50/Qmk8WZeX/L701r48e3qRuCpSCGqXEeYAvF2DXakayYN1ccBTEq1Q5GgJWipzfX9xbeUAUei0csITi3qbc/ZhZ7Cz+aA8CWhH33jCwm3ye55B/FAd8LE9al53F8wpf6fPoTGe61T/Cota/VQkyAsnPTWYhZOW9cbq6QDyNfZ/BW4qicG9fZh+6/VXulRivY6l/u15s/R8ZmUqez+8iV2Lx9lgeL8vRfWtGDVJVuqSA9oLIMiV13Fskv3epKMvbmt2Px3ZCffFmLPmgYv/+6BtRCsrp4B2zIavXSnhMiP54OWB9XaJHsMin0Rlau+h4btTcX86HhgtvdsU5uAaYj55fhANldbJtkfAhNEUv1XHnHPztz5Uj6EUXojLTbtRtBGjt2jgPdCmFBatHNltmYy1nTkaFO/tLplw8T8/O/tJ8tN8UlKhBK4rsV9UM2TW314K/Pnoi0GorgDNHNKKDh6RFc9ehDeaPvwpG6OAkAQYf6Vs9CqQ0xmG+KK1IAsj1f3luVKUM1SC6WO+etCcMnBqVKxZ4Z5FGhzyLcLmjUMRaRMnZyi7nWNvWvaPsGnhdZKJVfevK+3DHOdh6RUlqlcK2d8wK1Rteome+d1PqFCOKi6jDCdHhvqOcMf1IL3LCQVfAKdcSNZQxrMXKSqPrAcaXjJxJDLv24aqECuJ6PJiW/GkqWcagkRtUnEJjgz/1V6qlcV5G4HZqViXt1vGTkvlhqw6+4nF+jF2ChORzDKd8XdbzRJPk8hpnNC3odv+HwBYQKFDXTgP9PmfTRWA5AbUk0PeCTwUmyf1lRrOIL8gR8QJPjTRmCyUb1PgfVCnWPu17H2y04hQepS7/MFBo1VCYL0bzF2PeRFqrHG8mKl5wMdBLUVKhIg6IH1E8VwqAq8avVCrR9e64EksV8IwrxyJFq4HVn+XbAVkyr6pNPxMLNKwc/b0gBv5l66eBoOwqBikm/GIE9VS+NYbyU7Wvlw8BQEOZqM4BQQcTIuA+dwdB84zQuA0qBMdqhh5a8gwBLbs3OqG1nFU9Kx0vCAId3ivRa5gX2Zy2W+hSf2/wYGrv+slQ2MGIRkyLjwxbTBpClax5jYJPnTfwW6BouweGnSNIVSPeis2dMbcT3Fnr+WHN+RryCVcwcQCzpZZibcZnba2tKG2Vh8jY0OUfQ3/y4QPNRwklUOPTcux13Kt8zEWym3OyNkt73Dv/4FHaaRcyUpsgz5keNXTbQ7qTs0TBjlJRTgiKhqRG3eAVG32ve19cqSnQPOr1z35OyYnZxa2qTjs5k+4LI1Oboeq/ixQQU4gAqFSdr7KMism1N7RxfpofU/1Y57AVvmS9i3ZluhcOrNIOTr7pbaa9Z9ieRAkd7qtDb88gBSUG7TpbX8OF4B1JHvQ7Ot++5eTJ/OZDl5dYi764eqA9ZZvwFC+x8L16M839OhpX4+NciV1WptwVhuObMD+cMK3nydWCwrEbPSwsgOE5u7N/xMRdJMXIy7Y3FX59LwpCeewscqjjekqvvAXmqNpf1PMS1cUpYzM0AF+qiId9TJzmWJFlaPbSLU+URSGaKJjMtvqruzkHj1wqOdMxNhG5hndToOyrtqvN/1fkyimDHMZH97qKlWTAByphPQUF/6zz3o4QvzQydNJD63b/4taLwy6o09kjgEo4N4qMANoce9wngIWiVfWiHFOqFY2pRongULihNzSxwzPkoFTgXfhgI1zxCk61UJXjMVrtzssvTNVOpx6221FCxdPyZSaXIYElG4JpZp5JCG7skwFr7sD8jXIGQfLzNYsVPpdEhv1G/afU0jSn3n0MvYX6mOWpI1uooAH4tZdMPbRlF1Sq+32ThHd3U9uPSK55m07a9J9thrfiSNKwsHMQLIacL6a7KvStEydapUICk8R9jNx2141Esc0U6z6rlmtBIETYa7PDcWv4wdKqfB2QAPHpr33iNd/dnUymDKfsK35p3HLGrA7/4s4v5NMJ9q3BISKL3Q6uE+x+f471MoEfSRXxI8cQMSiB2Kl6gJ6zaNvXC/vhk+AINYLk1mpMir8TDSQ63vvf0KkyWj9zSPeZrKGAPGyhzusGMc8U8ArtnuiZhMWUfx3+eYxLDDKmxLf8/3t0mnVXBO97+JH1rtBOwRdM7FopJ+hunHJBzIm9PZfS4KIpynIyACqDJ4CHLkQZHKTrxj0/1RWXIyEDeerUAvk7lgWlRrzOt4vJ/4ix4vkp/0X/ZVOboxVGU1jhhHi+ZayKtjVnVr9Vo7+3+J03GHUpvlryMHvfXpEk/CtycL9n1sNYU2TyD/gaoVby9dHkQufVuv1ySdLtTikp1p4LsH2rqZVtduCJINbJiKQpK7DoiWs5kPfeifRHGnza7x4W1IZV9n+RM7UAPDHUNUrmEOXgsslr0pjDw3wXT+AFbvH0KBnIkXaKGTeCbD5j+Cwm5lErtIl6dR5elmBR4Q4gMZefLBLR1ZUjtLzXZT0eG/XYe6SnESORnWglMeO7tFBxsUsi9G4K/v9R1vaMPXXy+vx7gLWgSdgln3KL/nF29nIXs8u1I7iVxvWPyF625Yugxn96ShoiQr1H/WUyRqBTM+8H7i2HGKmipN/VkOGlS8v1TT8l3Dh0uObZPqSdpd4Ts7230xce3cP6DmmxfGnlhiPF3mW0EhrkGIvh9ducAtzI7OvBgUrTI1jjSxJuKrz1hTz023b9KT6PRXfPmvREyvhI4vBlIRThUq8UY3Y/F+HGZRkhZOSFAu5kLX50I/3EONVfy1GJP7nn7W49ZEme2+jpNDTXVvrVhn5p/zNIHS3ZzwvAN7OamNc8sxs+IYXiDMQXw6is3LXfeP+YQq7G4WpTgh1besRL19BU82GkOXlwtwk1ETiLfqXZIMlXbODK7EEkbAVAos0pskf7TnDjig3G6fkGO+QgUu8Ir+GFpNy5giCRZs/A+Z8tzzgbND3OedzKEPiWmDk7iqeDl/b+Sd7TQCTnHC19a+x4wF7fSRc6p8ZaOB+QgkiZLh9qIIRSGG4nfmUugu8szCDjyObfX1PRcRxYb2KAvmABNYZdfVkyhWsCMHthj80loOQdPZM4S08/S/bXf6IExWpGUASkU3TkxNWFJkbmCTNASfXbNAz6KLChRjJi18/vRNIezlo4OlW18LxLVTZp4YwlWtPp6BXb8siNm8ObJuq+v1Ql3VEpeQ0wyhcZX+ZDB8UCz3Q2mTrZwTEJb4PkNXjW0O4T+flsCpmPgVqucUbMoj73mC8gWZvF5BBDVhG3Zk15C+6SX1iOjEQVDM/6EhG1vw9X+qKA+G6wYbdB6yShkKW0s59gD0PifuEGtzt3im7pgg+q9LMVjQoHFBM4xu46RgFc2Kqa0DcfmzE09Wf7XdnAAPHdw2EAl3utgpgTXrBNqV3t5ETZRfTuuIKBeSbrmD3D39z3Kl2E4clXhLdsvlEBaUgYyziN7SqmvhPebuYgut+ci3MpEfbygEVTsmO8xKq5Lwmq/ssNI9pM5DaAl7CllwL8JMp6Kd5j6G7FSpdEvmo3B4XCbuPVTqandk0M6GDCQ++NrY/2ya9rBpK/inV/UNZmceWMSCzv7kNw7CVKpgKzYQ/UBMQSprH6xsDvuU7L7V1oSnu3W6QkERZCeGyGq13XFpY+h8Q5p38tthHWzXGlm5ZmOSOgIY/VorZOj0DhlIkIDk04NBLvZOInfBxRcHjcji9mBVCFV+Nw6VpDFTwMwbLiyzEg7jymapPs0gf0r+HOfr6qS6RLMYGlfGO4Gw2unwrFT6Ghok4NwlKvJlPGKTDMu/yxuJcLuq2eVvau6f7hz7RpNxQzzmws7MpIUKlXpczSDwL+06mKxniPeGsmcg8WfifmjSsS9SIARZBJwTDgr8jwGJ5zkW6gj6iXPf+00Fgx9FOfLr336/6e28zckbM8GGZ6Xk318iWru6X1Kc+GpP7W63BA0vHC2Z7k6UCnPUhTX33Ch+i744aeivrCuwzxb5XqDcEdzzyoRzrHl/zAGwc7QKDMGYi0NIXLKUXikrhwOx4nhusOePWlXZhf56DHFqWRubqX+q1YlE1eZG3PrzgnqsD7fH6hrfEm8uJnHlShAWGJ+EWhonL22s34a8ZpoFAVFkadxqdL1AOeOFAAmaRAVO9l9zAlVtURd2MVk1js1Qdyf/B/eC5yeIUhATVc5rTquhRrg6mLutdAu3F6POlYygukhLh1KPvADZ/7DJ9Rj+/6IY0HSQO2qlXC25QyA6WpIdZFNlHZIgYmbcnbeFEFtRGctqG3VEU3zHe7DU/q5j+tnwVIgKKdOFde2GPt+Tzd/7FNKOlE4bDX9fXKswJAmCrSUzn2uLfMj0B6iXf5a1wLfMFnI/+JfOBRblAz/Ji7kLXnsSUyPN3SshNHjiTHvkk6rkBoLuOxZoJ8E+VF9jM4UL0Ve+eKJ/jFlADCdEJ9/CfI3NUu+IdL4oPXv5fYETY6AMcP6Yk4A7DX2h0Dn74bqXvPBPqMzwpvgH8pKWtKV+0gHZAXRSt1JbUkq5dYZVboJGYC1ineU1KbxYBAC2uibOe0doGN9nIe7TF1rzASrz9DMaURY89xbqwkqcmAHK3NWZImreBZpDUk7K2PXj6Cvj0nQXgf6AGS8fCjWAS7C2EI4dA7ir/KoLincM7PboGntItfAsJGbCx/5f63MWOix0OTeAdDfVxiImHsKl+mjl2akivXGG7QVO9sX6sW0qk0SlPjybVLvTHS9DHhdslTSU5W8WmKxSRA/KmVhKi0HSkc2YpQ44KywmPhPzarOKQnv6WSx63OJloobSTKprJtRYVO7K0gxmd0Rm+6Z/25RTdBKuySB4NW/Z8OsU21J7+lswBHuNli4ocPLneNH8SXXuBhR+otqA8sAg7y5sGTxTzQDdl0YDg0U71LUnW3rR3lbv9+4hqD61jpBCrGn3oKg5uaU/CtV+BkltlwlF5QwQABTKGlnhlRL88Fra0nXEu15lXu/q0kb8wJFuIOTWlRYrb2ab0M0rFuzb6ab1+SMj70YcMaxXUvTKdb30AfTsQW9x0+r6ctrLnvkO/2qmGi5Io4mfuyPYhqpnffuaAnPOww4A2cyGlG/6fQfxebEi07XDZwvo/6ijPpXpyDtMAQ/+7bJ+6M02YTO17zGLGu66GkXCB3Kn2VK3dYRjrujTdRa3AFBRUiZ4kZYCaOHdQ1OiGRvVLWM4jVixyCufbRjqFpnbpInhv+E3zgbL7xaXtWh/l0MX+RFXlVHIg/0Ijnf27lLEwKciP/Pj1lLJhCBhcSgt5HXsKj4rPRvmxxNnF0n/f1H9TuYQiAkWpw0VppLRhiQXgIQvkvUBM54VoHf4mEG2JxmfcPuav0lA7PkT5Q3fSghKBZd9+MQ1/6C77p93jDqG1R6YlC8CkyUUawvZmQTH1N4yqsYwfBmgboRbU7HH/ikEdMQEBncrk6yZtdNQUNjRropSAiyjzQ5OjlpmlHPbHYDzcWKTQaWxjQWW71dG14Qced62k78qF8PC114iODNznnQORsTx7MlQV4OzSgCYqdjfHijT3q6xDiYh8Ma1K8225ItGtGBgFhAAzT/y8e0Q7LVUk0b5bpmFpOgywqGYXO+3n7oun4FBTTokB/vdTuDR2LLPsMwwkNaaJTPnmOxEghvxe2zyRaPTYLqEP4KAoldwr4jRtNhPJ65M/KikxyuGr3UGJ+CGdeBxpUprK79qYqwqFhGrKxpkTIhn3Gi5lOT5a0bZHjirfsAnLse0jA6NxPEKqwkRAmcOkWev+XUfmb3NJDuE5RzCvbtxaFbH2GYc0K+rxl+kFo/NsYdhX6dfovABreWnGRBfEtu6iZQ983Th7X3mXwrUte+lCmDjVaPZlugznHuTKrwcDba//ElpQ3CkfEz3vM0DwEoTTTy0MEa6Ya3eGKteG61+XD61LzbEif9BrPVlOUChhXgVIbq53PDi6k80/1yGBj7ILPomwrWnS6O+ubcKEGx8hp24RNC/ZyoDPwsUtk652OBYHaRYBvBm35oAzE6vxUdjkGN67r8oe/0RADprqAjlppPE9N//0qY4v4dmRQvJPqXIb/paU4CxySrZaitgPmk5jtLukhVgt3IR1A2R4aGd0fMaYzhvq/BK1J0tF07kL7aVNgWvvssw5TiO0CP8C0z9SP8+IDIqmXs5cVidGBBfD4/HHJeSr+MBLCF2I5lKAYoo6jRHzwfKnyo+r7sMLald+WGj9+yJ5Z4hom5J7Rc/ZbYifiN+vefPNrAC9RD/oBQbpXSkGuRYaaiu2RnxeWRQkzeuBBNTgv5fsQHjq8lpDOdgUfq2v1vkLh4bmQzQKh4j+6P4z6ZY3wZQdujEVBg7b8/WajdStdZvQ9A/vE2LfyRkw54lZjKz+1x1GCOfk+D+aUGI/mfFqtr0zEEm/HpxPUOtvd44FGCugREfmxZhtIPdTkydF4QQ93BcuG9sDvliesxfDrOy31xriOvxx6Q/Z63PpSJATDCRGjE09NSk6XT/nRswg8ozBG7G3CRjGqkOClsRURYSECxER+7pyKjsP5hSuZDrk32E5iI9jXwLv444KqMA6qmiweZ9xcBijdi8rwVHxYBk2iATaxr3/FVyzkaD8/rYAvupxbmxi3ovLCnRitQU2oyeNbXvcI2vSSRpbXhOaX7UaqHYz2UuQA+SOM5Zb3QY9KYgjziQj9u8ZN72mqneCQIeOatGGAbMAEdXQreHKw1KJlCP2U/OgYdDCTTu6d+cPtGNR/4mH1WNBbh0ywjmfPHOXf0svOs84Lg32lwvkj9T06n1zZ1iTHsM0Zvyht3bbM8aVsFCWlbtb9FBdFOge/FegcHBxKSCioaaXBubLs0PwbVkgSfPY/QV++21X8v3IR3c4q8aCPMgzUIMhzuvUfzqiYyxajjLRoP8tCFWGGM62AMuA1rjTX2/sK7/hjPJ80rmnAN49mMeHOC79JE/akl/3i+atyT3TQ48Y4uL13YK+LkYI5HHuzaB/rLqDiEMR/CNmTNXvS1lCcpC+VXK5xa/DAciD/vwyoIaPz5RGuaXa5wqagg16hpsPFId1rp1G8KGFEhVr5/E+2CXpCtGkaFkzpcTH9/jug2khLvs/aCQTTx7L3Zj3hJoDh6iV5fynTU/gKwXhXoyDVjUy+4QqxAmhow1Y75gW5Pd8g9A9gZhauyuJMgwPz4RFjxa8PYCm7me9N8d7ywxGvzjHTIZho3FW0JD3uY3Q1OO7CEHhweZ9tBOdjTuNTsamMOCGhrdT9+rnQahUO0XufJ0R0aXMozJ0jMQ3XCGzfPHSp6BGnV3XKLY98GTjUG2RXXoqOJe+9+irCDNDYqADPVrf06BxLlvudUrWx6VY7JY7qS5QPgWaDUCaJXDW9nhsqRUJE3hGGsF0ZakwJx0bOeGkBsK7DcKz4onVlB5XK0n84GVSDc2s5dTyJH7IZtwJDvL3xXllvRAw1fwbkY/7nC5rsD/5M+3NIaghex5b+OQeyTNw5LHLed75tsFAuYXFD27oHeTfqK4ywzXgXusF2sASP3Ctoif6hvBenOzhIDhlV2rV0gqxqpwAJOHQQ0LYqp3SXGgmgSTVK9tmRjsRrvNhhfEcRJT18z0SOUxYaR7/Cy3gq+u2+AwGAneQsJ9eLs4O1wxbQtGvKK9n4N0C2O3kAw3fYHbIdGlsDufTTvO4XRqYciO5/fntpp5CPaMKDoALpdscQJUUpONtYc0lWG4qRS6Qkl9A5xDizlXgNmlb1FDHf/tdjecM4foHm2NF3lSqsEZ6Qmwe1Cnw1z7mHjxlQPTQW/QwvwMk2S4d0coVTtI8/sclt7WoQqUKwWvwrrOx44g0vl2pVe2q3w/cfqjtdpFlbSAuPbZ8dYwF38z0DFTd+aemt5LAbb56FyYJ4k4S4OKkRWRoMbiqj63wVB4PtgMAopX1CaoWmmA8xn39ynYE6lwVMxyLmf9NsuKX6gbFlutHv48ti+0AggSIxR2FvmLofbPqbLHn3TRBJMNQYiOk3lL3GwDvDnpMifWgAYuP7R5/KcyqBgfHbrwCf6WoCNr5UG8G9u3a6TJoryFLl2kAnpMVtjOZwuvp5K/TTNJpyTRcEPGMZtEs1AGoEhjmp8817N/G33uHV2/XDVy8wgsbAzBZcMgTy0z71cbQxEaoablHUMboNWU38ucLlOPZARaQdkNaTa9NskMMB3k3wcjfkTlxAqwiWr17WgPQPaAwEdKQHyNvizABBNAAA=" alt="HINODE PARTNERS" loading="lazy"><p class="foot-tagline">ともに未来を照らし、持続的な価値を創造するパートナー</p></div><div class="foot-col"><h4>SERVICES</h4><ul><li><a class="" href="#senryaku" data-beta-route="senryaku">事業戦略・M&amp;A戦略・新規事業</a></li><li><a class="" href="#ma" data-beta-route="ma">M&amp;A実行・事業再生・PMI・組織再編</a></li><li><a class="" href="#global" data-beta-route="global">海外進出・JV設立支援</a></li><li><a class="" href="#kanri" data-beta-route="kanri">事業ポートフォリオ・資本コスト経営・FP&amp;A</a></li><li><a class="" href="#kaikei" data-beta-route="kaikei">IPO・決算・ガバナンス高度化</a></li><li><a class="" href="#dx" data-beta-route="dx">IT・DX・組織・業務改革</a></li></ul></div><div class="foot-col"><h4>PROFESSIONAL</h4><ul><li><a class="" href="#member" data-beta-route="member">メンバー紹介</a></li><li><a class="" href="#index/why" data-beta-route="index" data-beta-anchor="why">選ばれる理由</a></li></ul></div><div class="foot-col"><h4>COMPANY</h4><ul><li><a class="" href="#flow" data-beta-route="flow">支援の流れ</a></li><li><a class="" href="#company" data-beta-route="company">会社概要</a></li><li><a class="" href="#contact" data-beta-route="contact">お問い合わせ</a></li></ul></div></div><div class="foot-bottom"><p>&copy; 日の出パートナーズ株式会社</p></div></div></footer>
+
+<script>
+
+const SERVICES = [{"number":"01","slug":"strategy","title":"事業戦略・M&A戦略・新規事業","title_lines":["事業戦略・M&A戦略","新規事業"],"description":"成長戦略、M&A戦略、新規事業構想、事業計画策定、企業の持続的な成長に向けた意思決定と実行を支援します。","id":"senryaku","no":"01","titleJa":"事業戦略・M&A戦略・新規事業","titleEn":"","summary":"成長戦略、M&A戦略、新規事業構想、事業計画策定、企業の持続的な成長に向けた意思決定と実行を支援します。","scope":[],"challenges":[],"deliverables":[]},{"number":"02","slug":"ma-turnaround","title":"M&A実行・事業再生・PMI・組織再編","title_lines":["M&A実行・事業再生","PMI・組織再編"],"description":"FA、DD、企業価値評価、ディール実行、事業再生、カーブアウト、PMI、統合・再編まで、M&Aに関するプロセスを一貫して支援します。","id":"ma","no":"02","titleJa":"M&A実行・事業再生・PMI・組織再編","titleEn":"","summary":"FA、DD、企業価値評価、ディール実行、事業再生、カーブアウト、PMI、統合・再編まで、M&Aに関するプロセスを一貫して支援します。","scope":[],"challenges":[],"deliverables":[]},{"number":"03","slug":"overseas-jv","title":"海外進出・JV設立支援","title_lines":["海外進出","JV設立支援"],"description":"市場調査、事業構想、パートナー探索・交渉、投資・JV設計、契約、ガバナンス、実行・PMIまで、海外展開を力強くサポートします。","id":"global","no":"03","titleJa":"海外進出・JV設立支援","titleEn":"","summary":"市場調査、事業構想、パートナー探索・交渉、投資・JV設計、契約、ガバナンス、実行・PMIまで、海外展開を力強くサポートします。","scope":[],"challenges":[],"deliverables":[]},{"number":"04","slug":"portfolio-fpa","title":"事業ポートフォリオ・資本コスト経営・FP&A","title_lines":["事業ポートフォリオ","資本コスト経営・FP&A"],"side_title_source":"事業PF・資本コスト経営 FP&A","description":"ROIC経営、事業ポートフォリオ構築、資本配分、経営計画・予算・業績管理等を通じ、企業価値向上に向けた経営の仕組みを実現します。","id":"kanri","no":"04","titleJa":"事業ポートフォリオ・資本コスト経営・FP&A","titleEn":"","summary":"ROIC経営、事業ポートフォリオ構築、資本配分、経営計画・予算・業績管理等を通じ、企業価値向上に向けた経営の仕組みを実現します。","scope":[],"challenges":[],"deliverables":[]},{"number":"05","slug":"ipo-governance","title":"IPO・決算・ガバナンス高度化","title_lines":["IPO・決算","ガバナンス高度化"],"description":"IPO準備、決算・開示対応、内部統制、会計方針の整理、会計不正調査・フォレンジック、海外拠点対応など、企業の信頼性を高める取組みを支援します。","id":"kaikei","no":"05","titleJa":"IPO・決算・ガバナンス高度化","titleEn":"","summary":"IPO準備、決算・開示対応、内部統制、会計方針の整理、会計不正調査・フォレンジック、海外拠点対応など、企業の信頼性を高める取組みを支援します。","scope":[],"challenges":[],"deliverables":[]},{"number":"06","slug":"it-dx","title":"IT・DX・組織・業務改革","title_lines":["IT・DX","組織・業務改革"],"description":"IT戦略、システム構想、AI・データ活用、業務改革、組織・権限設計、人事、実行PMOまで、企業の変革を支援します。","id":"dx","no":"06","titleJa":"IT・DX・組織・業務改革","titleEn":"","summary":"IT戦略、システム構想、AI・データ活用、業務改革、組織・権限設計、人事、実行PMOまで、企業の変革を支援します。","scope":[],"challenges":[],"deliverables":[]}];
+const MEMBERS = [];
+const EXPERIENCES = [];
+const INSIGHTS = [];
+const COMPANY_INFO = {"section_title":"会社概要","description":"日の出パートナーズは、日本企業の経営課題に向き合い、企業価値向上を支援するコンサルティングファームです。戦略立案から実行・定着まで一貫して伴走します。","name":"日の出パートナーズ株式会社","name_en":"HINODE PARTNERS, INC.","representative_title":"共同代表・代表取締役","representatives":["古川 英司","木山 雅之"],"capital_yen":20000000,"capital_display":"20,000,000円","business":"コンサルティング事業","postal_code":"102-0073","address":"東京都千代田区九段北1-13-6","building":"千客万来九段ビル2階","email":"info@hinode.partners","website":"https://hinode.partners","source_page":1};
+const HOW_WE_WORK = [{"number":"01","title":"相談","description":"現状の課題やご要望を丁寧にヒアリングします。"},{"number":"02","title":"構想","description":"課題整理と方向性の検討、最適なアプローチをご提案します。"},{"number":"03","title":"分析","description":"専門的な分析により、実現可能性と具体的な解決策を策定します。"},{"number":"04","title":"実行","description":"計画に基づき、実務レベルで確実に実行を支援します。"},{"number":"05","title":"定着","description":"成果の定着・自走化に向け、継続的なフォローを行います。"}];
+
+</script>
+<script>
+/* =========================================================
+   HINODE PARTNERS v8 — vanilla JS のみ。外部ライブラリ不使用。
+   SERVICES / MEMBERS / EXPERIENCES / INSIGHTS / COMPANY_INFO / HOW_WE_WORK は
+   直前の <script> でグローバル定義済み（データを1箇所で管理する方針）。
+   ========================================================= */
+(function(){
+  "use strict";
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- 1. モバイルドロワーメニュー ---------- */
+  (function(){
+    var toggle = document.getElementById('menuToggle');
+    var drawer = document.getElementById('mobileDrawer');
+    if (!toggle || !drawer) return;
+    var panel = drawer.querySelector('.drawer-panel');
+    var focusablesSel = 'a[href], button:not([disabled])';
+    var lastFocused = null;
+
+    function open(){
+      drawer.dataset.open = 'true';
+      toggle.setAttribute('aria-expanded', 'true');
+      toggle.setAttribute('aria-label', 'メニューを閉じる');
+      document.body.style.overflow = 'hidden';
+      lastFocused = document.activeElement;
+      var first = panel.querySelector(focusablesSel);
+      if (first) first.focus();
+      document.addEventListener('keydown', onKeydown);
+    }
+    function close(){
+      drawer.dataset.open = 'false';
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'メニューを開く');
+      document.body.style.overflow = '';
+      document.removeEventListener('keydown', onKeydown);
+      if (lastFocused) lastFocused.focus();
+    }
+    function onKeydown(e){
+      if (e.key === 'Escape'){ close(); return; }
+      if (e.key === 'Tab'){
+        var items = [].slice.call(panel.querySelectorAll(focusablesSel));
+        if (!items.length) return;
+        var firstEl = items[0], lastEl = items[items.length-1];
+        if (e.shiftKey && document.activeElement === firstEl){ e.preventDefault(); lastEl.focus(); }
+        else if (!e.shiftKey && document.activeElement === lastEl){ e.preventDefault(); firstEl.focus(); }
+      }
+    }
+    toggle.addEventListener('click', function(){
+      drawer.dataset.open === 'true' ? close() : open();
+    });
+    drawer.querySelectorAll('[data-drawer-close]').forEach(function(el){
+      el.addEventListener('click', close);
+    });
+  })();
+
+  /* ---------- 2. サービス・アコーディオン ---------- */
+  (function(){
+    var heads = document.querySelectorAll('.svc-head');
+    heads.forEach(function(head){
+      var panel = document.getElementById(head.getAttribute('aria-controls'));
+      if (!panel) return; // アコーディオンではない単純なリンク（例：service.htmlの一覧）はここで除外し、通常の遷移に任せる
+      head.addEventListener('click', function(){
+        var isOpen = head.getAttribute('aria-expanded') === 'true';
+        // 他のパネルは閉じる（一度に1つだけ開く、視線の迷いを減らす）
+        heads.forEach(function(h){
+          if (h !== head){
+            h.setAttribute('aria-expanded','false');
+            var p = document.getElementById(h.getAttribute('aria-controls'));
+            if (p) p.classList.remove('is-open');
+          }
+        });
+        head.setAttribute('aria-expanded', String(!isOpen));
+        panel.classList.toggle('is-open', !isOpen);
+      });
+    });
+
+    function openService(id){
+      var head = document.querySelector('[data-svc-toggle="'+id+'"]');
+      if (!head) return;
+      var panel = document.getElementById(head.getAttribute('aria-controls'));
+      heads.forEach(function(h){
+        if (h !== head){ h.setAttribute('aria-expanded','false');
+          var p = document.getElementById(h.getAttribute('aria-controls')); if (p) p.classList.remove('is-open'); }
+      });
+      head.setAttribute('aria-expanded','true');
+      panel.classList.add('is-open');
+    }
+    // 「こんな課題で〜」カードから該当サービスへジャンプした際、自動的にアコーディオンも開く
+    document.querySelectorAll('[data-svc-jump]').forEach(function(a){
+      a.addEventListener('click', function(){ setTimeout(function(){ openService(a.dataset.svcJump); }, 350); });
+    });
+  })();
+
+  /* ---------- 3. Trust Strip カウントアップ ---------- */
+  (function(){
+    var nums = document.querySelectorAll('.trust-num[data-count]');
+    if (!nums.length) return;
+    if (reduceMotion){ nums.forEach(function(el){ el.textContent = el.dataset.count; }); return; }
+    var easeOutExpo = function(t){ return t===1 ? 1 : 1 - Math.pow(2,-10*t); };
+    function animate(el){
+      var target = parseInt(el.dataset.count, 10);
+      var duration = 1100, start = performance.now();
+      function tick(now){
+        var p = Math.min((now-start)/duration, 1);
+        el.textContent = Math.round(target * easeOutExpo(p));
+        if (p < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if (e.isIntersecting){ animate(e.target); io.unobserve(e.target); } });
+    }, {threshold:.5});
+    nums.forEach(function(el){ io.observe(el); });
+  })();
+
+  /* ---------- 4. プロフェッショナル・スポットライト ---------- */
+  (function(){
+    var stack = document.getElementById('proStack');
+    var prevBtn = document.getElementById('proPrev');
+    var nextBtn = document.getElementById('proNext');
+    var info = document.getElementById('proInfo');
+    if (!stack || !prevBtn || !nextBtn || typeof MEMBERS === 'undefined') return;
+
+    var current = 0;
+    stack.innerHTML =
+      '<div class="pro-dot" id="dotBack3"></div>' +
+      '<div class="pro-dot" id="dotBack2"></div>' +
+      '<div class="pro-dot" id="dotBack1"></div>' +
+      '<div class="pro-dot is-active" id="dotFront"></div>';
+    var dotFront = document.getElementById('dotFront');
+    var dotBack1 = document.getElementById('dotBack1');
+    var dotBack2 = document.getElementById('dotBack2');
+    var dotBack3 = document.getElementById('dotBack3');
+    dotFront.style.left = '0px'; dotBack1.style.left = '132px';
+    dotBack2.style.left = '160px'; dotBack3.style.left = '188px';
+
+    var detailToggle = document.getElementById('proDetailToggle');
+    var detail = document.getElementById('proDetail');
+    var detailOpen = false;
+
+    function memberAt(offsetBack){
+      var i = (current - offsetBack + MEMBERS.length) % MEMBERS.length;
+      return MEMBERS[i];
+    }
+
+    function setDot(el, member){
+      if (member.photo){ el.style.backgroundImage = 'url(' + member.photo + ')'; el.textContent = ''; }
+      else { el.style.backgroundImage = 'none'; el.textContent = member.initial; }
+    }
+
+    function fillContent(){
+      var m = MEMBERS[current];
+      setDot(dotBack3, memberAt(3));
+      setDot(dotBack2, memberAt(2));
+      setDot(dotBack1, memberAt(1));
+      setDot(dotFront, m);
+
+      document.getElementById('proRole').textContent = m.role;
+      document.getElementById('proName').firstChild.nodeValue = m.nameJa;
+      document.getElementById('proEn').textContent = m.nameEn;
+      var quals = m.qualifications && m.qualifications.length ? m.qualifications.join('・') : '';
+      document.getElementById('proTitle').textContent = quals ? (m.position + '／' + quals) : m.position;
+      document.getElementById('proDesc').textContent = m.summary;
+
+      var tagsEl = document.getElementById('proTags');
+      tagsEl.innerHTML = (m.expertise||[]).map(function(t){ return '<span>'+t+'</span>'; }).join('');
+
+      document.getElementById('proCareer').textContent = m.career || '';
+      document.getElementById('proExpertise').textContent = (m.expertise||[]).join('、') || '—';
+      document.getElementById('proThemes').textContent = (m.experienceThemes||[]).join('、') || '—';
+      var indLabel = document.getElementById('proIndustryLabel');
+      var indDD = document.getElementById('proIndustry');
+      if (m.industries && m.industries.length){
+        indLabel.style.display = ''; indDD.style.display = '';
+        indDD.textContent = m.industries.join('、');
+      } else {
+        indLabel.style.display = 'none'; indDD.style.display = 'none';
+      }
+
+      document.getElementById('proIndex').textContent = String(current+1).padStart(2,'0');
+      document.getElementById('proTotal').textContent = String(MEMBERS.length).padStart(2,'0');
+      document.getElementById('proProgressBar').style.width = ((current+1)/MEMBERS.length*100)+'%';
+
+      // 詳細パネルを開いたまま切り替えた場合、高さを再計算
+      if (detailOpen) detail.style.maxHeight = detail.scrollHeight + 'px';
+    }
+
+    function render(direction){
+      if (reduceMotion){ fillContent(); return; }
+      var dots = [dotFront, dotBack1, dotBack2, dotBack3];
+      dots.forEach(function(d){ d.classList.add('is-swap-out'); });
+      info.classList.add(direction === 'prev' ? 'is-fading-prev' : 'is-fading-next');
+      setTimeout(function(){
+        fillContent();
+        dots.forEach(function(d){ d.classList.remove('is-swap-out'); d.classList.add('is-swap-in'); });
+        info.classList.remove('is-fading-prev','is-fading-next');
+        requestAnimationFrame(function(){
+          setTimeout(function(){ dots.forEach(function(d){ d.classList.remove('is-swap-in'); }); }, 20);
+        });
+      }, 150);
+    }
+
+    // 初期ロード後にメンバー写真をプリロードし、切替時の白フラッシュ・デコード遅延を防ぐ
+    if (typeof MEMBERS !== 'undefined'){
+      window.addEventListener('load', function(){
+        MEMBERS.forEach(function(m){ if (m.photo){ var im = new Image(); im.src = m.photo; } });
+      });
+    }
+
+    prevBtn.addEventListener('click', function(){ current = (current-1+MEMBERS.length)%MEMBERS.length; render('prev'); });
+    nextBtn.addEventListener('click', function(){ current = (current+1)%MEMBERS.length; render('next'); });
+
+    detailToggle.addEventListener('click', function(){
+      detailOpen = !detailOpen;
+      detailToggle.setAttribute('aria-expanded', String(detailOpen));
+      detailToggle.textContent = detailOpen ? '経歴・専門領域の詳細を閉じる －' : '経歴・専門領域の詳細を見る ＋';
+      detail.style.maxHeight = detailOpen ? detail.scrollHeight + 'px' : null;
+    });
+
+    // サービスセクションの「関連するプロフェッショナル」から直接ジャンプ
+    document.querySelectorAll('[data-member-link]').forEach(function(a){
+      a.addEventListener('click', function(){
+        var id = a.dataset.memberLink;
+        var idx = MEMBERS.findIndex(function(m){ return m.id === id; });
+        if (idx >= 0){ current = idx; fillContent(); }
+      });
+    });
+
+    fillContent();
+  })();
+
+  /* ---------- 5. ヒーロー：粒子アニメーション ----------
+     2026-08-17 Premium Motion Design Upgrade：
+     ・Network（線でつなぐ）表現は廃止 → 空気中に漂う微細な光の塵、という表現に変更
+     ・Far/Mid/Nearの3層に分け、奥行きを作る
+     ・Delta Time方式に変更（120Hz等の高リフレッシュレート環境でも速度が変わらないように）
+     ・毎フレームのグラデーション生成をやめ、起動時に数種類のグローを事前描画してdrawImageで使い回す（負荷軽減） */
+  (function(){
+    var canvas = document.getElementById('particleCanvas');
+    var hero = document.getElementById('top');
+    if (!canvas || !hero || reduceMotion) return;
+    var ctx = canvas.getContext('2d');
+    var W, H, DPR, particles = [], rafId = null, running = false, heroVisible = false, lastTime = null;
+    var mouseX = 0.5, mouseY = 0.5, glowOffsetX = 0, glowOffsetY = 0; // ポインター追従（ごく僅か）
+
+    // ---- グローの事前描画（gold/white × soft/small の4種）----
+    var sprites = {};
+    function buildSprites(){
+      [['gold','216,189,142'], ['white','255,255,255']].forEach(function(pair){
+        var name = pair[0], rgb = pair[1];
+        [['soft', 64], ['small', 24]].forEach(function(sizePair){
+          var variant = sizePair[0], size = Math.round(sizePair[1] * DPR);
+          var off = document.createElement('canvas');
+          off.width = size; off.height = size;
+          var octx = off.getContext('2d');
+          var grad = octx.createRadialGradient(size/2,size/2,0,size/2,size/2,size/2);
+          grad.addColorStop(0, 'rgba('+rgb+',1)');
+          grad.addColorStop(1, 'rgba('+rgb+',0)');
+          octx.fillStyle = grad;
+          octx.beginPath(); octx.arc(size/2,size/2,size/2,0,Math.PI*2); octx.fill();
+          sprites[name+'-'+variant] = off;
+        });
+      });
+    }
+
+    function resize(){
+      var rect = hero.getBoundingClientRect();
+      DPR = Math.min(window.devicePixelRatio||1, 2);
+      W = rect.width; H = rect.height;
+      canvas.width = W*DPR; canvas.height = H*DPR;
+      canvas.style.width = W+'px'; canvas.style.height = H+'px';
+      ctx.setTransform(DPR,0,0,DPR,0,0);
+      buildSprites();
+      initParticles();
+    }
+
+    // FAR：小さく暗く、数は多め・非常にゆっくり／MID：主役、金と白が混在／NEAR：ごく少数、大きく柔らかい
+    var LAYERS = [
+      {name:'far',  countRatio:.46, rMin:0.35, rMax:0.8, aMin:0.08, aMax:0.22, speed:0.55, sprite:'small'},
+      {name:'mid',  countRatio:.46, rMin:0.7,  rMax:1.5, aMin:0.12, aMax:0.32, speed:1.0,  sprite:'small'},
+      {name:'near', countRatio:.08, rMin:2.0,  rMax:5.0, aMin:0.03, aMax:0.10, speed:1.4,  sprite:'soft', maxCount:10},
+    ];
+
+    function biasedX(){
+      var r = Math.random();
+      var skewed = Math.pow(r, W < 640 ? 0.8 : 0.55); // 文字のある左側は薄く、右側に寄せる
+      return skewed*W;
+    }
+    function spawn(layer, initial){
+      var warm = Math.random() < 0.82;
+      return {
+        layer: layer,
+        x: biasedX(), y: initial ? Math.random()*H : H + 10,
+        r: layer.rMin + Math.random()*(layer.rMax-layer.rMin),
+        baseAlpha: layer.aMin + Math.random()*(layer.aMax-layer.aMin),
+        speed: layer.speed,
+        phase: Math.random()*Math.PI*2,
+        phase2: Math.random()*Math.PI*2,
+        twinkle: Math.random()*Math.PI*2, twinkleSpeed: 0.5 + Math.random()*0.6,
+        sprite: (warm?'gold':'white') + '-' + layer.sprite
+      };
+    }
+    function initParticles(){
+      var base = W < 640 ? 26 : (W < 1100 ? 60 : 90);
+      particles = [];
+      LAYERS.forEach(function(layer){
+        var n = Math.round(base * layer.countRatio);
+        if (layer.maxCount) n = Math.min(n, layer.maxCount);
+        for (var i=0;i<n;i++) particles.push(spawn(layer, true));
+      });
+    }
+
+    function step(now){
+      if (!running){ rafId = null; lastTime = null; return; }
+      if (lastTime === null) lastTime = now;
+      var dt = Math.min((now - lastTime) / 1000, 0.033); // 秒。フレーム落ち時に一気に進まないよう上限
+      lastTime = now;
+      var t = now;
+
+      ctx.clearRect(0,0,W,H);
+      ctx.globalCompositeOperation = 'lighter'; // 光の重なりを柔らかく馴染ませる
+
+      for (var k=0;k<particles.length;k++){
+        var p = particles[k];
+        // 低周波のsin波を合成した疑似フローフィールド。直線的に流れず、ゆっくり漂うだけにする
+        var vx = Math.sin(p.y*0.002 + t*0.00008 + p.phase)*0.05 + Math.sin(t*0.00003 + p.phase2)*0.02;
+        var vy = -0.045 + Math.cos(p.x*0.0015 + t*0.00006 + p.phase)*0.02;
+        p.x += vx * p.speed * dt * 60;
+        p.y += vy * p.speed * dt * 60;
+        p.twinkle += p.twinkleSpeed * dt;
+
+        var alpha = p.baseAlpha * (0.7 + 0.3*Math.sin(p.twinkle));
+        var img = sprites[p.sprite];
+        var size = p.r * (p.layer.name==='near' ? 14 : 8);
+        ctx.globalAlpha = alpha;
+        ctx.drawImage(img, p.x - size/2 + glowOffsetX, p.y - size/2 + glowOffsetY, size, size);
+
+        if (p.y < -10) Object.assign(p, spawn(p.layer, false));
+      }
+      ctx.globalAlpha = 1;
+      ctx.globalCompositeOperation = 'source-over';
+      rafId = requestAnimationFrame(step);
+    }
+    function start(){ if (running) return; running = true; lastTime = null; if (!rafId) rafId = requestAnimationFrame(step); }
+    function stop(){ running = false; if (rafId){ cancelAnimationFrame(rafId); rafId = null; } }
+
+    // Heroが画面内 かつ タブがアクティブなときだけ動かす
+    function evaluate(){ (heroVisible && !document.hidden) ? start() : stop(); }
+    var io = new IntersectionObserver(function(entries){ heroVisible = entries[0].isIntersecting; evaluate(); }, {threshold:0});
+    io.observe(hero);
+    document.addEventListener('visibilitychange', evaluate);
+
+    // ポインターにごく僅かだけ追従（デスクトップのみ、認識できないレベルのLerp）
+    if (window.matchMedia('(pointer:fine)').matches){
+      hero.addEventListener('mousemove', function(e){
+        var rect = hero.getBoundingClientRect();
+        mouseX = (e.clientX - rect.left) / rect.width - 0.5;
+        mouseY = (e.clientY - rect.top) / rect.height - 0.5;
+      });
+      (function lerpGlow(){
+        glowOffsetX += (mouseX*8 - glowOffsetX) * 0.02;
+        glowOffsetY += (mouseY*8 - glowOffsetY) * 0.02;
+        requestAnimationFrame(lerpGlow);
+      })();
+    }
+
+    // resizeはrequestAnimationFrameで間引く（連続発火のたびに再初期化しない）
+    var resizePending = false;
+    window.addEventListener('resize', function(){
+      if (resizePending) return;
+      resizePending = true;
+      requestAnimationFrame(function(){ resize(); resizePending = false; });
+    });
+
+    resize();
+  })();
+
+  /* ---------- 6. 浮遊CTA：ヒーロー通過後に表示、Contact/Footer到達で非表示 ---------- */
+  (function(){
+    var pill = document.getElementById('floatPill');
+    var hero = document.getElementById('top');
+    var contact = document.getElementById('contact');
+    if (!pill || !hero) return;
+    var pastHero = false, atEnd = false;
+    function update(){ pill.classList.toggle('is-shown', pastHero && !atEnd); }
+    new IntersectionObserver(function(entries){ pastHero = !entries[0].isIntersecting; update(); }, {threshold:0}).observe(hero);
+    if (contact){
+      new IntersectionObserver(function(entries){ atEnd = entries[0].isIntersecting; update(); }, {threshold:0}).observe(contact);
+    }
+  })();
+
+  /* ---------- 7. スクロール出現（IntersectionObserverのみ） ---------- */
+  var REVEAL_SEL = '.reveal, .reveal-text, .reveal-list';
+  if (!reduceMotion) {
+    var io2 = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('is-visible'); io2.unobserve(e.target); } });
+    }, {threshold:.12});
+    document.querySelectorAll(REVEAL_SEL).forEach(function(el){ io2.observe(el); });
+  } else {
+    document.querySelectorAll(REVEAL_SEL).forEach(function(el){ el.classList.add('is-visible'); });
+  }
+})();
+
+</script>
+
+<script id="hinode-beta-bridge">
+(function(){
+  function sendRoute(route, anchor){
+    parent.postMessage({type:'hinode-beta-route', route:route, anchor:anchor||''}, '*');
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a[data-beta-route]');
+    if(!a) return;
+    e.preventDefault();
+    sendRoute(a.getAttribute('data-beta-route'), a.getAttribute('data-beta-anchor') || '');
+  });
+  window.addEventListener('message', function(e){
+    var d=e.data||{};
+    if(d.type==='hinode-beta-anchor' && d.anchor){
+      requestAnimationFrame(function(){
+        var el=document.getElementById(d.anchor);
+        if(el) el.scrollIntoView({block:'start'});
+      });
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
