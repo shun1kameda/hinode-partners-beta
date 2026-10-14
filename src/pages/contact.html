@@ -489,6 +489,45 @@ table.plain th{width:10rem;font-weight:500;color:var(--ai);white-space:nowrap}
 @media(prefers-reduced-motion:reduce){.brochure-service{transition:none}}
 
 </style>
+<style id="hinode-typography">
+@font-face{font-family:"Hinode Tsukushi Gothic Local";src:local("FOT-筑紫ゴシック Pr5N R"),local("TsukuGoPr5N-R"),local("FOT-筑紫ゴシック Pro R"),local("TsukuGoPro-R");font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:"Hinode Tsukushi Gothic Local";src:local("FOT-筑紫ゴシック Pr5N M"),local("TsukuGoPr5N-M"),local("FOT-筑紫ゴシック Pro M"),local("TsukuGoPro-M");font-style:normal;font-weight:500;font-display:swap}
+@font-face{font-family:"Hinode Tsukushi Gothic Local";src:local("FOT-筑紫ゴシック Pr5N D"),local("TsukuGoPr5N-D"),local("FOT-筑紫ゴシック Pro D"),local("TsukuGoPro-D");font-style:normal;font-weight:600;font-display:swap}
+@font-face{font-family:"Hinode Tsukushi Gothic Local";src:local("FOT-筑紫ゴシック Pro B"),local("TsukuGoPro-B"),local("FOT-筑紫ゴシック Pr5N D"),local("TsukuGoPr5N-D");font-style:normal;font-weight:700;font-display:swap}
+
+:root{
+  --gothic:var(--gothic-web,"Hinode Tsukushi Gothic Local"),"FOT-筑紫ゴシック Pr5N","FOT-筑紫ゴシック Pro","筑紫ゴシック","TsukuGoPr5N","TsukuGoPro","Hiragino Kaku Gothic ProN","Yu Gothic","YuGothic","Noto Sans JP",sans-serif;
+  --display:"Hiragino Mincho ProN","Yu Mincho","YuMincho","Noto Serif JP",serif;
+  --mincho:var(--display);
+  --latin:"Avenir Next","Avenir","Helvetica Neue",Arial,sans-serif;
+}
+
+/* 筑紫ゴシックを基本に、コピーと名刺の一言へ書体のコントラストを集中。 */
+body,input,textarea,select,button{font-family:var(--gothic)}
+h1,h2,h3,h4,.drawer-panel a{font-family:var(--gothic)}
+h2{font-weight:600;letter-spacing:.045em}
+h3{font-weight:500;letter-spacing:.025em}
+.brochure-service strong,.why-title-ja,.reason h3,.member-roster-note-title{font-family:var(--gothic);font-weight:500}
+.pro-info .name,.member-profile-name{font-family:var(--gothic);font-weight:500;letter-spacing:.065em}
+.hero h1,.page-title,.closing-title,.principle-text,.name-closing,.service-text,.message-title,.message-copy,.hero-copy,.display-copy{font-family:var(--display);font-weight:600;letter-spacing:.055em;font-feature-settings:"palt" 1}
+.eyebrow,.why-title-en,.step-en,.steps .step-en,h2 .en,.pro-info .name .en,.member-profile-en,.member-intro-stat span,.member-roster-note-kicker,.service-number,.reason-number,.svc-no,.why-no,.pro-count{font-family:var(--latin);font-feature-settings:"palt" 0;font-variant-numeric:lining-nums tabular-nums}
+.service-number,.reason-number,.why-no{font-weight:500;letter-spacing:.035em}
+/* Only source-verified card wording is inserted into these elements. */
+.member-quote,.pro-quote,.member-profile-quote{
+  display:block;grid-column:1/-1;margin:1.05rem 0 1.1rem;padding:.1rem 0 .1rem 1rem;
+  border-left:2px solid var(--kin-line);color:var(--ai);
+  font-family:var(--display);font-size:clamp(1.08rem,1.7vw,1.45rem);
+  font-style:normal;font-weight:600;line-height:1.8;letter-spacing:.055em;
+  font-feature-settings:"palt" 1;overflow-wrap:anywhere;text-wrap:pretty;
+}
+.member-profile-quote,.member-profile .member-quote{font-size:clamp(1rem,1.3vw,1.2rem);line-height:1.75;margin:.5rem 0 .6rem}
+.member-quote[hidden],.pro-quote[hidden],.member-profile-quote[hidden],.member-quote:empty,.pro-quote:empty,.member-profile-quote:empty{display:none}
+@media(max-width:640px){
+  .hero h1,.page-title{letter-spacing:.035em}
+  .member-quote,.pro-quote,.member-profile-quote{font-size:1.08rem;letter-spacing:.035em;padding-left:.8rem}
+  .member-profile-quote,.member-profile .member-quote{font-size:1rem}
+}
+</style>
 </head>
 <body>
 <a class="skip" href="#main">本文へスキップ</a>
