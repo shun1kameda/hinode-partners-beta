@@ -1,0 +1,91 @@
+{
+  "date": "2026-10-15",
+  "source_document": "日の出パートナーズ_会社案内_字形・フォント統一_資本金追加 (1)(1).pdf",
+  "method": "Built-in image_gen edits using brochure references. Generative detail reconstruction, not recovery of original pixels. No member portraits edited. WebP encoding only after editing.",
+  "assets": [
+    {
+      "path": "assets/media/senryaku-hd-20261015.webp",
+      "width": 1862,
+      "height": 845,
+      "bytes": 225210,
+      "source_page": 4,
+      "source_embedded_image": "img-022.png",
+      "purpose": "Composition-preserving service image clarity restoration",
+      "prompt_subject": "A small green seedling growing from a mound of dark soil. Preserve the original central sprout and crop, natural green bokeh, tiny leaf veins, fine soil grains.",
+      "constraints": "Preserve subject and palette; remove pixel blocks; no watermark; navy brochure corner implemented in CSS."
+    },
+    {
+      "path": "assets/media/ma-hd-20261015.webp",
+      "width": 1862,
+      "height": 845,
+      "bytes": 213538,
+      "source_page": 4,
+      "source_embedded_image": "img-019.png",
+      "purpose": "Composition-preserving service image clarity restoration",
+      "prompt_subject": "Two businesspeople shaking hands, navy suits and white cuffs, cool pale office background. Preserve the hand gesture and original crop. Anatomically accurate hands and fingers, natural skin texture, crisp suit fabric.",
+      "constraints": "Preserve subject and palette; remove pixel blocks; no watermark; navy brochure corner implemented in CSS."
+    },
+    {
+      "path": "assets/media/global-hd-20261015.webp",
+      "width": 1862,
+      "height": 845,
+      "bytes": 504938,
+      "source_page": 4,
+      "source_embedded_image": "img-020.png",
+      "purpose": "Composition-preserving service image clarity restoration",
+      "prompt_subject": "The original upward-looking cluster of modern glass office towers against blue sky. Preserve the building massing, perspective, reflections and framing; restore continuous precise window grids and clean edges.",
+      "constraints": "Preserve subject and palette; remove pixel blocks; no watermark; navy brochure corner implemented in CSS."
+    },
+    {
+      "path": "assets/media/kanri-hd-20261015.webp",
+      "width": 1862,
+      "height": 845,
+      "bytes": 361934,
+      "source_page": 4,
+      "source_embedded_image": "img-021.png",
+      "purpose": "Composition-preserving service image clarity restoration",
+      "prompt_subject": "The original composition of interlocking dark blue-gray metallic puzzle pieces, with one light silver piece resting over them. Preserve placement and silhouette; restore crisp metal edges and realistic fine surface texture.",
+      "constraints": "Preserve subject and palette; remove pixel blocks; no watermark; navy brochure corner implemented in CSS."
+    },
+    {
+      "path": "assets/media/kaikei-hd-20261015.webp",
+      "width": 1862,
+      "height": 845,
+      "bytes": 144960,
+      "source_page": 4,
+      "source_embedded_image": "img-023.png",
+      "purpose": "Composition-preserving service image clarity restoration",
+      "prompt_subject": "A businessperson's hand holding a dark pen over financial paperwork. Preserve the exact original framing, hand pose and paper layout. Restore crisp pen, natural skin and fine paper texture. Do not invent readable text or identifiable company names; document text stays appropriately out of focus.",
+      "constraints": "Preserve subject and palette; remove pixel blocks; no watermark; navy brochure corner implemented in CSS."
+    },
+    {
+      "path": "assets/media/dx-hd-20261015.webp",
+      "width": 1862,
+      "height": 845,
+      "bytes": 421112,
+      "source_page": 4,
+      "source_embedded_image": "img-024.png",
+      "purpose": "Composition-preserving service image clarity restoration",
+      "prompt_subject": "A magnifying glass diagonally placed over a blue digital data pattern. Preserve original lens placement, black handle, bright cool reflections and composition; restore crisp glass rim and detailed abstract data texture. No logos or readable promotional text.",
+      "constraints": "Preserve subject and palette; remove pixel blocks; no watermark; navy brochure corner implemented in CSS."
+    },
+    {
+      "path": "assets/media/services-cityscape-hd-20261015.webp",
+      "width": 1672,
+      "height": 941,
+      "bytes": 463724,
+      "source_page": 4,
+      "source_embedded_image": "img-020.png",
+      "purpose": "Distant skyline background derived from brochure architectural reference",
+      "prompt_subject": "Use the supplied office-tower photograph as architectural and color reference, but pull the camera far back for a broad, elevated panoramic skyline photograph. Show an entire cluster of many elegant high-rise office buildings across a modern metropolitan business district at blue hour with subtle warm window lights. Buildings seen from a distant overlook, not a street-level upward close-up. Full cityscape in the lower two thirds, layered skyline and clear deep-blue sky in the upper third. Spacious wide composition, diverse building heights, straight architectural geometry, crisp small windows, refined navy-and-champagne mood. This is a decorative background behind a large central service diagram; no dominant building fills the frame. Remove the original navy corner triangle and do not add graphic overlays, text, logos or watermarks. Output a high detail 3840x2160 landscape photograph.",
+      "constraints": "Preserve subject and palette; remove pixel blocks; no watermark; navy brochure corner implemented in CSS."
+    },
+    {
+      "path": "assets/media/brochure-dawn-original.webp",
+      "width": 1952,
+      "height": 806,
+      "source_page": 2,
+      "method": "Original PDF image, no generative edit; WebP quality 95 without resizing"
+    }
+  ]
+}
