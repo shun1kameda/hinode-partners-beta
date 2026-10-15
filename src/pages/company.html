@@ -587,6 +587,27 @@ html.js .contact-invitation .reveal.is-visible{transform:translateY(0)}
 @media(max-width:700px){.contact-invitation{padding:4.5rem 0}.contact-invitation-eyebrow{letter-spacing:.16em;margin-bottom:1.5rem}.contact-invitation .contact-invitation-title{font-size:clamp(1.4rem,5.6vw,2rem);line-height:1.8;letter-spacing:.015em}.contact-invitation-copy span{display:inline}.contact-invitation-copy span+span::before{content:" "}.contact-invitation-actions{grid-template-columns:1fr;gap:1rem;margin-top:2rem;max-width:28rem}.contact-invitation-mail,.contact-invitation-cta{min-height:6rem;padding:1.25rem 1rem}.contact-invitation-cta{min-height:4.5rem}.contact-invitation-address{font-size:clamp(1.35rem,6.1vw,2rem)}}
 @media(prefers-reduced-motion:reduce){.contact-invitation::before,.contact-invitation-mail,.contact-invitation-cta,.contact-invitation-cta::before,.contact-invitation-arrow,html.js .contact-invitation .reveal{transition:none!important;animation:none!important;transform:none!important}html.js .contact-invitation .reveal{opacity:1!important}.contact-invitation-cta::before{display:none}}
 </style>
+<style id="hinode-quality-typography">
+/* Reading rhythm and safe Japanese line breaking — 2026-10-15 */
+body{line-break:strict;word-break:normal}
+h1,h2,h3,h4,p,li,dd,dt,small,figcaption{overflow-wrap:break-word}
+h1,h2,h3,h4,.page-title,.principle-text,.name-closing,.member-roster-note-title{word-break:auto-phrase;text-wrap:balance}
+p,li,dd,.theme-desc,.member-biography,.service-text{word-break:auto-phrase;text-wrap:pretty;line-break:strict}
+.keep-phrase,.title-piece{white-space:nowrap}
+.service-editorial .page-title .title-piece{display:inline}
+h2 .en{display:inline-block;white-space:nowrap}
+.service-related-link>span:nth-child(2),.member-service-chip,.member-filter-button{min-width:0;word-break:auto-phrase;line-break:strict;text-wrap:pretty}
+.member-service-chip{align-items:center}
+.member-service-chip>span[aria-hidden],.service-related-link>span[aria-hidden]{flex-shrink:0}
+.member-profile-title,.service-expert small,.pro-role{word-break:normal;text-wrap:balance}
+.service-editorial-photo::before{content:"";position:absolute;z-index:1;left:0;top:0;width:24%;aspect-ratio:1;background:#081D37;clip-path:polygon(0 0,100% 0,0 100%);pointer-events:none}
+.service-photo-wrap{display:block;position:relative;overflow:hidden}
+.service-photo-wrap::after{content:"";position:absolute;left:0;top:0;width:24%;aspect-ratio:1;background:#081D37;clip-path:polygon(0 0,100% 0,0 100%);pointer-events:none}
+.service-photo-wrap>img{width:100%;display:block}
+.contact-invitation-copy span{word-break:auto-phrase;text-wrap:pretty}
+@media(max-width:700px){h2:not(.member-profile-name) .en{display:block;margin:.5rem 0 0;font-size:.65rem;line-height:1.6}.hero h1{font-size:clamp(1.55rem,6vw,2.5rem);letter-spacing:.02em;line-height:1.65}.hero h1 .line-inner{white-space:nowrap}.service-editorial .page-title{font-size:clamp(1.35rem,5.8vw,1.9rem);line-height:1.65}.contact-invitation-copy{max-width:30rem}.contact-invitation-copy span{display:block}.contact-invitation-copy span+span{margin-top:.5rem}.contact-invitation-copy span+span::before{content:none}.contact-invitation-eyebrow{letter-spacing:.12em}.site-foot .foot-grid{gap:2rem}.member-filter-button{max-width:100%;text-align:left}.contact-note{line-height:1.95}.contact-email{overflow-wrap:anywhere}}
+@media(max-width:360px){.contact-invitation .contact-invitation-title{font-size:1.3rem;letter-spacing:0}.hero h1{font-size:1.5rem}.service-editorial .page-title{font-size:1.3rem}}
+</style>
 </head>
 <body>
 <a class="skip" href="#main">本文へスキップ</a>
