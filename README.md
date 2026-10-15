@@ -1,8 +1,10 @@
 # HINODE PARTNERS
 
-公開β版: https://shun1kameda.github.io/hinode-partners-beta/
+正式公開URL: https://hinode.partners/ （wwwなし・名刺QRコードのリンク先。URLを変更しない）
 
-2026-10-14: 会社案内のキャッチコピー・6サービス領域・写真へ統一。公開対象を指定7名へ更新し、トップにメンバー選択アニメーションを実装。
+既存の確認用URL: https://shun1kameda.github.io/hinode-partners-beta/
+
+2026-10-15: 掲載対象を古川・木山・小野・亀田・武藤の5名に変更し、紹介を「主要メンバー」に統一。会社案内に基づく6サービス領域・写真・人物選択アニメーションを維持。
 
 編集後は `python scripts/build.py` で統合HTMLを再生成。
-更新根拠・検証範囲・保留事項は [更新記録](docs/update-20261014.md) を参照。
+最新の更新内容・正式URLの接続状況は [主要メンバー更新記録](docs/key-members-20261015.md) を参照。初回の根拠は [2026-10-14更新記録](docs/update-20261014.md) に保持。
