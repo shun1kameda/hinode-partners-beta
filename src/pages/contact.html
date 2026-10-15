@@ -570,6 +570,39 @@ main [id]{scroll-margin-top:calc(var(--site-head-height,72px) + 24px)}
 @keyframes hinode-photo-enter{from{opacity:.35;transform:scale(1.065)}to{opacity:1;transform:scale(1)}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}.selection-line,.nav a,.service-theme,.service-theme>img,[data-expertise-filter],[data-service-keyword]{transition:none!important}.pill::before,.cta::before,.contact-compose-button::before,.service-editorial-photo img{animation:none!important}.service-theme:hover,.service-theme:focus-visible,.service-theme:hover>img{transform:none!important}}
 </style>
+<style id="hinode-contact-invitation">
+.contact-invitation{position:relative;isolation:isolate;overflow:hidden;padding:clamp(5rem,9vw,8rem) 0;background:linear-gradient(145deg,#101E32 0%,#081529 62%,#060F20 100%);color:#F7F5EE;text-align:center;border-top:1px solid rgba(216,189,142,.28)}
+.contact-invitation::before{content:"";position:absolute;z-index:0;inset:-25% -10% 0;pointer-events:none;background:radial-gradient(ellipse at 78% 12%,rgba(216,189,142,.19),transparent 52%);opacity:.8;transform:translate3d(0,0,0);transition:opacity .8s ease,transform 1.2s ease}
+.contact-invitation::after{content:"";position:absolute;inset:0 0 auto;height:1px;background:linear-gradient(90deg,transparent,rgba(216,189,142,.65),transparent);pointer-events:none}
+.contact-invitation:hover::before,.contact-invitation:focus-within::before{opacity:1;transform:translate3d(-2%,1%,0)}
+.contact-invitation .wrap{position:relative;z-index:1;max-width:68rem}
+.contact-invitation-eyebrow{margin:0 0 2rem;color:#D8BD8E;font:italic 400 clamp(.78rem,1.25vw,1.05rem)/1.8 Georgia,"Times New Roman",serif;letter-spacing:.26em}
+.contact-invitation .contact-invitation-title{margin:0 auto 1.6rem;padding:0;color:#F7F5EE;font-family:var(--display);font-weight:500;font-size:clamp(1.6rem,3.2vw,2.75rem);line-height:1.7;letter-spacing:.04em;max-width:60rem}
+.contact-invitation-title span{display:block}
+.contact-invitation-title::after{display:none!important}
+.contact-invitation-copy{margin:0 auto;max-width:45rem;color:#C6CFDB;font-family:var(--gothic);font-size:clamp(.88rem,1.15vw,1rem);line-height:2.2;letter-spacing:.03em}
+.contact-invitation-copy span{display:block}
+.contact-invitation-actions{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(14rem,1fr);gap:1.5rem;max-width:62rem;margin:3rem auto 0}
+.contact-invitation-mail,.contact-invitation-cta{position:relative;isolation:isolate;min-width:0;min-height:7.5rem;box-sizing:border-box;display:flex;align-items:center;justify-content:center;padding:1.5rem 1.8rem;text-decoration:none;border:1px solid #BFA577;transition:background .4s ease,border-color .4s ease,color .4s ease,box-shadow .4s ease,transform .4s ease}
+.contact-invitation-mail{flex-direction:column;gap:.45rem;background:rgba(6,15,32,.2);color:#D8BD8E}
+.contact-invitation-address{font:400 clamp(1.4rem,3.2vw,2.65rem)/1.25 Georgia,"Times New Roman",serif;letter-spacing:.015em;overflow-wrap:anywhere}
+.contact-invitation-mail-note{color:#C6CFDB;font:400 .76rem/1.8 var(--gothic);letter-spacing:.12em}
+.contact-invitation-cta{gap:1.5rem;overflow:hidden;background:linear-gradient(125deg,#D8BD8E,#B99760);border-color:#D8BD8E;color:#0C1D42;font:600 .94rem/1.7 var(--gothic);letter-spacing:.1em}
+.contact-invitation-cta::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(110deg,transparent 20%,rgba(255,255,255,.3) 50%,transparent 80%);transform:translateX(-145%);transition:transform .65s cubic-bezier(.2,.7,.2,1)}
+.contact-invitation-arrow{display:inline-block;font:400 1.5rem/1 var(--latin);transition:transform .4s ease}
+.contact-invitation-mail:hover,.contact-invitation-mail:focus-visible{background:rgba(216,189,142,.09);border-color:#F0D4A0;color:#F0D4A0;box-shadow:0 10px 36px rgba(0,0,0,.15);transform:translateY(-3px)}
+.contact-invitation-cta:hover,.contact-invitation-cta:focus-visible{background:#101F36;color:#F0D4A0;border-color:#F0D4A0;box-shadow:0 10px 36px rgba(0,0,0,.18);transform:translateY(-3px)}
+.contact-invitation-cta:hover::before,.contact-invitation-cta:focus-visible::before{transform:translateX(145%)}
+.contact-invitation-cta:hover .contact-invitation-arrow,.contact-invitation-cta:focus-visible .contact-invitation-arrow{transform:translate(3px,-3px)}
+.contact-invitation a:focus-visible{outline:2px solid #F0D4A0;outline-offset:5px}
+html.js .contact-invitation .reveal{transform:translateY(20px);transition-duration:.8s;transition-timing-function:cubic-bezier(.16,1,.3,1)}
+html.js .contact-invitation .reveal.is-visible{transform:translateY(0)}
+.contact-invitation-title.reveal{transition-delay:.1s}
+.contact-invitation-copy.reveal{transition-delay:.2s}
+.contact-invitation-actions.reveal{transition-delay:.3s}
+@media(max-width:700px){.contact-invitation{padding:4.5rem 0}.contact-invitation-eyebrow{letter-spacing:.16em;margin-bottom:1.5rem}.contact-invitation .contact-invitation-title{font-size:clamp(1.4rem,5.6vw,2rem);line-height:1.8;letter-spacing:.015em}.contact-invitation-copy span{display:inline}.contact-invitation-copy span+span::before{content:" "}.contact-invitation-actions{grid-template-columns:1fr;gap:1rem;margin-top:2rem;max-width:28rem}.contact-invitation-mail,.contact-invitation-cta{min-height:6rem;padding:1.25rem 1rem}.contact-invitation-cta{min-height:4.5rem}.contact-invitation-address{font-size:clamp(1.35rem,6.1vw,2rem)}}
+@media(prefers-reduced-motion:reduce){.contact-invitation::before,.contact-invitation-mail,.contact-invitation-cta,.contact-invitation-cta::before,.contact-invitation-arrow,html.js .contact-invitation .reveal{transition:none!important;animation:none!important;transform:none!important}html.js .contact-invitation .reveal{opacity:1!important}.contact-invitation-cta::before{display:none}}
+</style>
 </head>
 <body>
 <a class="skip" href="#main">本文へスキップ</a>
@@ -605,7 +638,17 @@ main [id]{scroll-margin-top:calc(var(--site-head-height,72px) + 24px)}
 
 <a class="float-pill" href="#contact" data-beta-route="contact" id="floatPill">お問い合わせ <span aria-hidden="true">→</span></a>
 
-<main id="main"><section class="band band--deep"><div class="wrap"><p class="eyebrow">CONTACT</p><h1 class="page-title">お問い合わせ</h1><p class="lead narrow page-lead">企業の未来について、まずはお気軽にご相談ください。</p></div></section><section class="band" id="email"><div class="wrap contact-email-wrap"><div class="contact-topic-anchors" aria-hidden="true"><span id="topic-senryaku"></span><span id="topic-ma"></span><span id="topic-global"></span><span id="topic-kanri"></span><span id="topic-kaikei"></span><span id="topic-dx"></span></div><h2 class="reveal">メールでのお問い合わせ <span class="en">EMAIL</span></h2>
+<main id="main"><section class="contact-invitation" id="contact-intro" aria-labelledby="contactInvitationTitle">
+  <div class="wrap">
+    <p class="contact-invitation-eyebrow reveal">A BRIGHTER TOMORROW, TOGETHER.</p>
+    <h1 class="contact-invitation-title reveal" id="contactInvitationTitle"><span>挑戦するすべての人に、</span><span>ともに歩むパートナーを。</span></h1>
+    <p class="contact-invitation-copy reveal"><span>確かな専門性と、実行力で。企業の価値創造と、より良い社会の実現に貢献します。</span><span>企業の未来について、まずはお気軽にご相談ください。</span></p>
+    <div class="contact-invitation-actions reveal">
+      <a class="contact-invitation-mail" href="mailto:info@hinode.partners"><span class="contact-invitation-address">info@hinode.partners</span><span class="contact-invitation-mail-note">メールでのご相談はこちら</span></a>
+      <a class="contact-invitation-cta" href="#email"><span>ご相談のテーマを選ぶ</span><span class="contact-invitation-arrow" aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</section><section class="band" id="email"><div class="wrap contact-email-wrap"><div class="contact-topic-anchors" aria-hidden="true"><span id="topic-senryaku"></span><span id="topic-ma"></span><span id="topic-global"></span><span id="topic-kanri"></span><span id="topic-kaikei"></span><span id="topic-dx"></span></div><h2 class="reveal">メールでのお問い合わせ <span class="en">EMAIL</span></h2>
   <div class="contact-composer" id="contactComposer" hidden>
     <label for="contactTopic">ご相談のテーマ</label>
     <p class="contact-topic-help" id="contactTopicHelp">ご相談に近いテーマをお選びください。</p>
