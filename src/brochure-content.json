@@ -166,9 +166,7 @@
       "kiyama",
       "kameda",
       "ono",
-      "muto",
-      "orimo",
-      "ajimura"
+      "muto"
     ],
     "items": [
       {
@@ -266,32 +264,6 @@
         "public": true
       },
       {
-        "id": "orimo",
-        "name": "織茂 勝利",
-        "role": "シニアマネージャー",
-        "qualification": null,
-        "education": "東京大学大学院修士課程修了",
-        "expertise": [
-          "製造業・R&D戦略",
-          "戦略実行支援",
-          "CAE・AI活用",
-          "M&A戦略",
-          "IT・DX・組織・業務改革",
-          "人事・採用戦略"
-        ],
-        "note": null,
-        "tags": [
-          "製造業・R&D",
-          "IT・DX",
-          "人事・採用",
-          "戦略実行"
-        ],
-        "photo": "orimo.png",
-        "image_xref": 624,
-        "position_in_pdf": "下段左端",
-        "public": true
-      },
-      {
         "id": "muto",
         "name": "武藤 航平",
         "role": "マネージャー",
@@ -313,17 +285,9 @@
         "image_xref": 637,
         "position_in_pdf": "下段左から2人目",
         "public": true
-      },
-      {
-        "id": "ajimura",
-        "name": "味村 有佳子",
-        "role": null,
-        "qualification": null,
-        "expertise": [],
-        "photo": null,
-        "public": true
       }
-    ]
+    ],
+    "section_title_web": "主要メンバー"
   },
   "closing_hero": {
     "headline": "挑戦するすべての人に、ともに歩むパートナーを。",

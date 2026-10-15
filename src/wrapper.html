@@ -4,8 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="color-scheme" content="light">
-<title>日の出パートナーズ株式会社｜β版</title>
+<title>日の出パートナーズ株式会社</title>
 <meta name="description" content="ともに未来を照らし、持続的な価値を創造するパートナー">
+<link rel="canonical" href="https://hinode.partners/">
+<meta property="og:url" content="https://hinode.partners/">
 <style>
 html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#F2F1EE}
 #siteFrame{display:block;width:100%;height:100%;border:0;background:#F2F1EE}
@@ -33,7 +35,7 @@ body{font-family:var(--gothic)}
 <noscript><style>#boot,#siteFrame{display:none}html,body{overflow:auto;height:auto}body{padding:2rem;box-sizing:border-box}</style><p>日の出パートナーズ株式会社</p><p>メール：<a href="mailto:info@hinode.partners">info@hinode.partners</a></p><p>サイトをご覧いただくにはJavaScriptを有効にしてください。</p></noscript>
 
 <div id="boot">HINODE PARTNERS</div>
-<iframe id="siteFrame" title="日の出パートナーズ株式会社 β版"></iframe>
+<iframe id="siteFrame" title="日の出パートナーズ株式会社"></iframe>
 <script>
 const PAGE_B64 = __PAGE_DATA__;
 const PAGE_TITLES = __PAGE_TITLES__;
@@ -71,7 +73,7 @@ function renderFromHash(){
   if(loadingKey===key) return;
   loadingKey=key;
   boot.classList.remove('is-hidden');
-  document.title=(PAGE_TITLES[s.route]||'日の出パートナーズ株式会社')+'｜β版';
+  document.title=PAGE_TITLES[s.route]||'日の出パートナーズ株式会社';
   frame.onload=function(){
     boot.classList.add('is-hidden');
     if(s.anchor){
