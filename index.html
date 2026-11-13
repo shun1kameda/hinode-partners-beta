@@ -68,6 +68,25 @@ function parseHash(){
   return {route,anchor};
 }
 function routeKey(s){return s.route+'|'+(s.anchor||'')}
+function addCareersNavigation(doc){
+  function makeLink(){
+    const link=doc.createElement('a');
+    link.href='/careers/';
+    link.target='_top';
+    link.textContent='採用情報';
+    return link;
+  }
+  const desktop=doc.querySelector('nav.nav');
+  const mobile=doc.querySelector('nav.drawer-panel');
+  const footer=doc.querySelector('footer a[data-beta-route="company"]');
+  if(desktop) desktop.append(makeLink());
+  if(mobile) mobile.insertBefore(makeLink(),mobile.querySelector('a[data-beta-route="contact"]'));
+  if(footer && footer.closest('li')){
+    const item=doc.createElement('li');
+    item.append(makeLink());
+    footer.closest('li').after(item);
+  }
+}
 function renderFromHash(){
   const s=parseHash(), key=routeKey(s);
   if(loadingKey===key) return;
@@ -75,6 +94,7 @@ function renderFromHash(){
   boot.classList.remove('is-hidden');
   document.title=PAGE_TITLES[s.route]||'日の出パートナーズ株式会社';
   frame.onload=function(){
+    addCareersNavigation(frame.contentDocument);
     boot.classList.add('is-hidden');
     if(s.anchor){
       setTimeout(function(){frame.contentWindow.postMessage({type:'hinode-beta-anchor',anchor:s.anchor},'*')},40);
