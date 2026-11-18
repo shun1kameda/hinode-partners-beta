@@ -73,3 +73,13 @@ table.plain,.company-table,.company-data>div,
 @media(max-width:480px){
   .site-foot .foot-grid{grid-template-columns:1fr}
 }
+
+/* Professional backgrounds: user-approved brochure wording, 2026-11-18. */
+.member-background{width:fit-content;max-width:100%;box-sizing:border-box;margin:.8rem 0 1rem;padding:.55rem .85rem;border-left:3px solid #AA762A;background:#F6EBD6;color:#805316;font-size:1.05rem;font-weight:700;line-height:1.65;letter-spacing:.025em;overflow-wrap:anywhere}
+.member-profile-background{grid-column:1/-1;margin:.15rem 0 0}
+#professionals .pro-background{font-size:1.15rem;margin:-.2rem 0 1.25rem}
+.leader-background{display:block;margin-top:.55rem;color:#805316;font-family:var(--gothic);font-size:1rem;font-weight:700;line-height:1.65}
+@media(max-width:700px){
+  .member-background,#professionals .pro-background{font-size:1rem;padding:.5rem .7rem;letter-spacing:.01em}
+  .leader-background{font-size:.94rem}
+}

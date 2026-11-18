@@ -45,3 +45,6 @@ body{font-size:18px}
   .bar{font-size:14px}
   .contactaction{max-width:100%;padding:16px 18px}
 }
+
+.profile-background{display:block;width:fit-content;margin:8px 0;padding:5px 9px;border-left:3px solid #AA762A;background:#F6EBD6;color:#805316;font-size:17px;font-weight:700;line-height:1.65}
+@media(max-width:650px){.profile-background{font-size:16px}}
