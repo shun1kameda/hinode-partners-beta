@@ -1,0 +1,75 @@
+/* Shared typography: keep body copy and controls readable on every route. */
+html{font-size:18px}
+body{font-size:1rem;line-height:1.95}
+.wrap{width:min(100% - 3rem,70rem)}
+.nav{font-size:.95rem;gap:1.2rem}
+.pill,.cta,.round-link,.float-pill,.brochure-link,.hero-explore{font-size:.95rem}
+h2{font-size:clamp(1.5rem,2.8vw,1.85rem)}
+h2 .en,h2:not(.member-profile-name) .en{font-size:.75rem}
+h3{font-size:1.2rem}
+.lead{font-size:1.12rem;line-height:2}
+.note,.contact-note,.service-map-hint{font-size:.95rem}
+.eyebrow,.hero .hero-brochure-kicker{font-size:.85rem}
+.hero h1{font-size:clamp(2.2rem,4.5vw,4.3rem)}
+.hero .lead{max-width:39rem}
+.service-description,.reason-desc,.theme-desc,.service-theme p,
+.brochure-process p,.leadership p,.svc-head p,.svc-sub li,
+.challenge-card li,.steps p,.exp-item p,.ledger li,.callout,
+table.plain,.company-table,.company-data>div,
+.member-profile-detail ul,.contact-invitation-copy{font-size:1rem}
+.reason h3,.principle h3{font-size:1.15rem}
+.principle-text{font-size:1.2rem}
+.leaders small{font-size:.82rem;line-height:1.6}
+.leaders figcaption{font-size:1.15rem}
+.member-profile-summary{font-size:1rem!important;line-height:1.95!important}
+.member-profile-title,.member-profile-role,.member-profile summary,
+.member-filter-button,.member-filter-heading p,.member-filter-heading .member-filter-count,
+.member-service-chip,.member-profile-tags span,
+.pro-info .title-jp,.pro-info .role,.pro-tags span,.pro-detail-toggle,
+.pro-detail dd,.pro-count,#professionals .pro-choice-name{font-size:.9rem}
+.member-profile-en,#professionals .pro-info .name .en{font-size:.78rem}
+#professionals .pro-roster-heading{font-size:.85rem}
+.foot-col a,.foot-tagline,.foot-bottom p{font-size:.9rem}
+.foot-col h4{font-size:.8rem}
+.site-foot .foot-grid{grid-template-columns:1.2fr 1.6fr .8fr .8fr;gap:2rem}
+.vision-statement{margin:0;max-width:60rem;padding:0 0 0 1.6rem;border-left:3px solid var(--kin);font-family:var(--display);font-size:clamp(1.5rem,2.5vw,2rem);font-weight:500;line-height:1.9;letter-spacing:.035em;color:var(--ai)}
+.vision-statement span{display:block}
+.vision-section h2{margin-bottom:2rem}
+.service-honeycomb--desktop .hex-label{font-size:19.5px}
+.service-honeycomb--desktop .hex-center-copy{font-size:13px}
+.service-honeycomb--mobile .hex-label{font-size:15.5px}
+.service-honeycomb--mobile .hex-center-copy{font-size:10.5px}
+@media(max-width:1100px){
+  .site-head .wrap{gap:.7rem}
+  .nav{gap:.8rem}
+  .site-head .pill{padding:.65rem 1rem}
+}
+@media(max-width:1000px){
+  .site-foot .foot-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:860px){
+  .wrap{width:calc(100% - 2.5rem)}
+}
+@media(max-width:700px){
+  html{font-size:17px}
+  body{font-size:1rem;line-height:1.95}
+  .wrap{width:calc(100% - 2rem)}
+  h2{font-size:1.5rem;line-height:1.55}
+  .lead{font-size:1.06rem;line-height:1.95}
+  .hero h1{font-size:clamp(1.7rem,6.6vw,2.8rem);line-height:1.6}
+  .hero h1 .line-inner{white-space:normal}
+  .service-editorial .page-title{font-size:clamp(1.6rem,6vw,2rem)}
+  .vision-statement{font-size:1.5rem;padding-left:1rem;letter-spacing:.01em;line-height:1.9}
+  .vision-statement span{display:inline}
+  .member-profile-name{font-size:1.3rem!important}
+  .member-profile-title,.member-profile-role,.member-profile summary,
+  .member-filter-button,.member-service-chip,.member-profile-tags span,
+  #professionals .pro-choice-name,.pro-tags span{font-size:.94rem}
+  .leaders small{font-size:.85rem}
+  .float-pill{font-size:.94rem}
+  .company-data>div{grid-template-columns:5.2rem minmax(0,1fr);gap:.8rem}
+  .contact-invitation .contact-invitation-title{font-size:clamp(1.6rem,6vw,2rem)}
+}
+@media(max-width:480px){
+  .site-foot .foot-grid{grid-template-columns:1fr}
+}
